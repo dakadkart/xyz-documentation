@@ -1,3 +1,5 @@
+# Work with Activity Log
+
 ## Space configuration
 
 !!! Note "Your account needs access to the XYZ Pro Services."

@@ -1,4 +1,4 @@
-# Using Feature Clustering
+# Use Clustering
 
 This section describes how to retrieve features from XYZ Hub inside a tile or bounding-box in a
 clustered form.

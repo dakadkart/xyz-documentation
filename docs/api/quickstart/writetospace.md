@@ -1,4 +1,4 @@
-# Writing to a Space
+# Write to a Space
 
 Having created the new space, you can write to it. The following example adds a collection of features.
 

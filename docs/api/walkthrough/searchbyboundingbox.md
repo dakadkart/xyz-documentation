@@ -1,4 +1,4 @@
-# Search by BoundingBox
+# Search by Bounding Box
 
 !!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
 

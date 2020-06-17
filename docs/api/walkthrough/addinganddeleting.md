@@ -1,4 +1,4 @@
-# Adding and Deleting Features
+# Add and Delete Features
 
 !!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
 

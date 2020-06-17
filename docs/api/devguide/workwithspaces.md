@@ -1,4 +1,4 @@
-# Working with Spaces
+# Work with Spaces
 
 ## Creating a Space
 

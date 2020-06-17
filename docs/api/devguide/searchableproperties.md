@@ -1,4 +1,4 @@
-# Adjust searchable feature-properties
+# Adjust Searchable Properties
 
 !!! Note "Your account needs access to the XYZ Pro Services."
 

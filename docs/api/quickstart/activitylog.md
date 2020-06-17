@@ -1,4 +1,4 @@
-# Use Activity-Log
+# Use Activity Log
 
 !!! Note "Your account needs access to the XYZ Pro Services."
 

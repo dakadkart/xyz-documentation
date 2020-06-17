@@ -1,3 +1,5 @@
+# Manage Tokens
+
 HERE XYZ Hub APIs use project tokens that are tied to your Account or HERE Accounts SSO identity. Make sure to keep your credentials safe and don't include them directly in any web pages as they are the key to generate new access tokens.
 
 Usually you would use two tokens:
