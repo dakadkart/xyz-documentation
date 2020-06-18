@@ -20,7 +20,7 @@ The *coordinates* array of the **Point** object usually contains two to three di
 }
 ```
 
-<!-- [View this **Point** on a map](http://geojson.tools/index.html?url=data:text/json,{%22type%22:%20%22Point%22,%22coordinates%22:%20[8.53362,50.16192]}) -->
+[View this **Point** on a map](http://geojson.tools/index.html?url=data:text/json,{%22type%22:%20%22Point%22,%22coordinates%22:%20[8.53362,50.16192]})
 
 ### MultiPoint
 

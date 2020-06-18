@@ -1,3 +1,5 @@
+# Publish
+
 One of the most powerful features of HERE XYZ Studio is that it allows you to publish your map
 without having to run your own infrastructure and still allows you to update the content
 whenever necessary.
@@ -5,17 +7,14 @@ whenever necessary.
 You can easily share a link to your map or copy & paste a snippet of code that you can
 directly include on a web page or in a blog for example.
 
-<video width="100%"  controls>
-  <source src="../../assets/videos/publish-legend.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>   
+You can view a video overview of this content [here](https://www.here.xyz/assets/videos/publish-legend.mp4).
 
 ## Project Settings
 
 You can control the publishing from the **Project Settings** dialog. There you can see if
 the map is currently visible to others.
 
-[![Settings](../assets/images/studio-settings.png)](../assets/images/studio-settings.png)
+[![Settings](https://www.here.xyz/assets/images/studio-settings.png)](https://www.here.xyz/assets/images/studio-settings.png)
 
 By default, every map you create with HERE XYZ Studio is private and visible only to you until you decide to publish it.
 
@@ -31,7 +30,7 @@ Also, you can select a license the map will be shared with to others - but you d
 All you have to do to publish the map is to turn publishing on (you can turn it off anytime
 again as well if you wish).
 
-[![Settings](../assets/images/studio-published.png)](../assets/images/studio-published.png)
+[![Settings](https://www.here.xyz/assets/images/studio-published.png)](https://www.here.xyz/assets/images/studio-published.png)
 
 When the map is published, you we also see the **URL** where it can be reached. You can copy this and
 share it with people directly or you can link to it from somewhere like blog or wikipage.

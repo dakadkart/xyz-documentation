@@ -1,3 +1,5 @@
+# Navigate
+
 When you start exploring, it's always good to know your way around first
 so that you always find your way back.
 
@@ -20,10 +22,7 @@ If you have a lot of projects, you will also see a couple of organizer
 functions that help you quickly get an overview or find what you're looking
 for.
 
-<video width="100%"  controls>
-  <source src="../../assets/videos/projects-dashboard.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+You can view a video overview of this content [here](https://www.here.xyz/assets/videos/projects-dashboard.mp4).
 
 ### Data Hub
 
@@ -34,10 +33,7 @@ dataset. You can also upload data as a new dataset.
 You can also manage your data, upload new datasets, edit entries, delete complete datasets and of course download a file of the content stored 
 in our cloud.
 
-<video width="100%"  controls>
-  <source src="../../assets/videos/data-hub.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+You can view a video overview of this content [here](https://www.here.xyz/assets/videos/data-hub.mp4).
 
 ## Project
 
@@ -45,12 +41,9 @@ Your browser does not support the video tag.
 
 You can quickly navigate around the map using the mouse, changing the view
 by _dragging_ the map and using the _zoom control_ (or the mouse wheel) to
-quickly zoom nearer or father away from the map. You can also **search** for cities and places by using the search bar. 
+quickly zoom nearer or father away from the map. You can also **search** for cities and places by using the search bar.
 
-<video width="100%"  controls>
-  <source src="../../assets/videos/navigate-map.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+You can view a video overview of this content [here](https://www.here.xyz/assets/videos/navigate-map.mp4).
 
 ### Map Bookmarks
 
@@ -59,7 +52,4 @@ that you need to _switch_ between different pre-defined map views. So in each
 project you can define you own **location bookmarks** and quickly switch 
 between them.
 
-<video width="100%"  controls>
-  <source src="../../assets/videos/navigate-bookmarks.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+You can view a video overview of this content [here](https://www.here.xyz/assets/videos/navigate-bookmarks.mp4).
