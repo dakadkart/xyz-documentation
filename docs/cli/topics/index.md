@@ -1,5 +1,7 @@
 # HERE CLI
 
+## Overview
+
 We think developers deserve an easy to use, convenient and streamlined experience to work with XYZ Hub APIs. That’s why we’ve built the HERE CLI. HERE CLI is a Node.js command line interface which works not only with HERE XYZ Hub, but eventually, with any HERE API. Right now, it allows you to interact with HERE XYZ Hub to create and manage your Projects and easily upload and manage your datasets.
 
 <script id="asciicast-ohII9SQNs1RIuaSkfAO5UgHlX" src="https://asciinema.org/a/ohII9SQNs1RIuaSkfAO5UgHlX.js" async></script>
@@ -7,8 +9,8 @@ We think developers deserve an easy to use, convenient and streamlined experienc
 !!! tip "HERE CLI on GitHub"
     [HERE CLI is Open Source](https://github.com/heremaps/here-cli), where developers like yourself can contribute new functionality and features.
 
-In this section, we'll quickly introduce you to the HERE CLI, how to install it and how to make the
-most of it while working on your project. There are many more tips in the [CLI tutorial](https://developer.here.com/tutorials/using-the-xyz-cli/).
+In this section, we will quickly introduce you to the HERE CLI, how to install it and how to make the
+most of it while working on your project. There are many more tips in the [CLI Tutorial](https://developer.here.com/tutorials/using-the-xyz-cli/).s
 
 ## Introduction
 
@@ -64,7 +66,7 @@ sudo apt-get install -y nodejs
 To be on the safe side you might want to install the optional `build-essentials` package as you might come across
 native packages eventually and it's good to have the right tools around.
 
-#### Check that it works
+#### Check That it Works
 
 After installing, check in the command-line if `npm` is available. Depending on how you installed it you might need to close and reopen your terminal or command-line prompt.
 

@@ -1,4 +1,6 @@
-# Importing shapefiles into XYZ
+# Shapefiles
+
+## Import Shapefiles into XYZ
 
 [Shapefiles](https://en.wikipedia.org/wiki/Shapefile) are a proprietary but common geospatial file format developed by ESRI. It is frequently used by governments to store geospatial data. 
 
@@ -20,7 +22,7 @@ You should also install
 - [mapshaper](https://github.com/mbloch/mapshaper)
 - [QGIS](https://www.qgis.org/) and the [HERE XYZ QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/)
 
-## Standard shapefile upload via the HERE XYZ CLI
+## Standard Shapefile Upload via the HERE XYZ CLI
 
 Unlike a GeoJSON file, a shapefile is made up of a number of separate files. Shapefiles on the internet are usually zipped, but once uncompressed you will see a number of files with the same name but different extensions. Some of the more important ones are:
 
@@ -38,11 +40,11 @@ The CLI will look for `my_shapefile.dbf` and other files in the specified direct
 
 Note that you can use `-a` to select attributes of features to convert into tags, which will let you filter features server-side when you access the XYZ Hub API.
 
-## Advanced shapefile upload
+## Advanced Shapefile Upload
 
 Shapefiles are an infinitely variable format, and there will be cases where you may need to manipulate or modify the data in order to import it into your XYZ space. You can do this with other open-source geospatial tools, specifically `mapshaper` and QGIS.
 
-### mapshaper
+### Mapshaper
 
 `mapshaper` is a powerful command-line tool for editing and manipulating geospatial data in a variety of common formats.
 
@@ -79,22 +81,22 @@ Note that you can also run `mapshaper` as a web app, though there may be limits 
 	http://mapshaper.org
 
 
-### HERE XYZ QGIS plugin
+### HERE XYZ QGIS Plugin
 
 QGIS is an open-source desktop GIS tool that lets you edit, visualize, manage, analyze and convert geospatial data. You can upload and download data from your XYZ spaces using the [HERE XYZ QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/). (The plugin is also available [on Github](https://github.com/heremaps/xyz-qgis-plugin).)
 
 You can install the HERE XYZ QGIS plugin from within QGIS Plugin search tool if you have the "show experimental plugins" option checked in the plugin console settings.
 
-![experimental](../assets/images/qgis_plugin_experimental.png)
+[![Experimental](https://www.here.xyz/assets/images/qgis_plugin_experimental.png)](https://www.here.xyz/assets/images/qgis_plugin_experimental.png)
 
 You can easily open almost any shapefile in QGIS, at which point you can save it to your XYZ spaces using the HERE XYZ QGIS plugin, or export it as GeoJSON to the desktop to use the HERE XYZ CLI streaming upload options.
 
 
-## Large individual features
+## Large Individual Features
 
 Some shapefiles may contain very large and extremely detailed individual lines or polygons. (Coastlines are a common example.) If a single feature is greater than 10-20MB, you may see `400` or `413` http errors when you try to upload the shapefile. In many cases, this level of detail is unnecessary for web mapping. If so, you can try to simplify the feature using `mapshaper` or QGIS. You may also want to adjust HERE XYZ CLI upload parameters so less data is sent in each API request.
 
-### Adjusting 'chunk' parameters
+### Adjusting 'chunk' Parameters
 
 In order to optimize upload speed, the CLI "chunks" features together and then sends the chunk to the API. There are typically 200 features per chunk. While a large feature may be small enough to be uploaded, when combined with other features, the chunk may be too large for the API.
 
@@ -104,7 +106,7 @@ You can adjust the chunk size using `-c` -- in this example, the CLI will upload
 
 Depending on the size of the feature, you may want to try `c -10` (ten per request) or even `c -1` (which would load one feature at a time).
 
-### Simplifying with mapshaper
+### Simplifying with Mapshaper
 
 You can simplify lines and polygons in shapefiles using `-simplify`.
 
@@ -114,7 +116,7 @@ Depending on the zoom level and extent your web map, you can also try `10%`, `5%
 	
 More information on simplification is available here: https://github.com/mbloch/mapshaper/wiki/Command-Reference#-simplify
 
-As previously mentioned, for smaller shapefiles you can pipe output from `mapshaper` directly to the HERE XYZ CLI, accelerating your TTM (Time To Map).
+As previously mentioned, for smaller shapefiles you can pipe output from `mapshaper` directly to the HERE CLI, accelerating your TTM (Time To Map).
 
 	mapshaper big_shapefile.shp -o format=geojson - | here xyz upload spaceID -p property_name -t specific_tag -s
 	
@@ -127,7 +129,7 @@ As previously mentioned, for smaller shapefiles you can pipe output from `mapsha
 Note that the Simplify tool works in decimal degrees, and the default is 1 degree, which is probably not what you want. Useful values depend on the extent and zoom levels of your map, but `0.01`, `0.001`, `0.0001`, and `0.00001` are interesting values.
 
 
-## Very large shapefiles (> 200MB)
+## Very Large Shapefiles (> 200MB)
 
 The HERE XYZ CLI will attempt to load the entire shapefile into memory before uploading it to the API. This will generally work for shapefiles up to 200MB, but you will start to see Node.js memory errors beyond that.
 

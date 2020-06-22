@@ -1,4 +1,4 @@
-# HERE CLI
+# Commands
 
 In this section we give you a quick overview of the most commonly used commands to interact
 with XYZ Spaces from the HERE CLI.
@@ -18,7 +18,7 @@ The general structure is that you call the `here` command followed by *command*
 which essentially corresponds to the API you want to interact with or get more information
 from.
 
-### help
+### Help
 
 You can always call up help on the HERE CLI either by not providing any parameter at all or
 by using the `--help` switch.
@@ -27,7 +27,7 @@ by using the `--help` switch.
 here --help
 ```
 
-### configure
+### Configure
 
 As explained earlier, HERE CLI needs to know you to interact with your XYZ Spaces. You can use
 
@@ -44,7 +44,7 @@ here configure verify
 
 to check if the credentials provided can be used to interact with HERE APIs.
 
-### xyz
+### XYZ
 
 The `xyz` command is used to interact with XYZ Spaces.
 
@@ -56,7 +56,7 @@ To list all Spaces you have access to (with or without Schema Validation) you ca
 here xyz list
 ```
 
-#### Create a new Space
+#### Create a New Space
 
 ```
 here xyz create -t "sample test xyz" -d "sample creation"
@@ -82,7 +82,7 @@ When you create a new Space, the SpaceID will be generated automatically.
     This is a Pro feature that requires a license. [Learn more about XYZ Pro features here](../../xyz_pro).
 
 
-#### Upload/Update data to a Space
+#### Upload/Update Data to a Space
 
 ##### Options
 
@@ -175,15 +175,15 @@ If the lat/lon columns contain letters or other invalid characters, the features
 
 You can adjust the "chunk" size when streaming an upload. This controls the number of features that the CLI sends to the API at a time. The default chunk size is 200 features.
 
-###### Large features
+###### Large Features
 
 You may see upload errors from the CLI if your features are large, complex geometries. By decreasing the chunk size, you may still be able to upload these large features. Try `-c 100`, or even `-c 10` or `-c 1`. If you continue to see errors you may need to [simplify the geometries](../shapefiles) before uploading them.
 
-###### Small features
+###### Small Features
 
 If your features are small, like you might see in a GeoJSON file containing points or a CSV, you will see faster uploads if you increase the chunk size. For example, `-c 1000` will enable the CLI to upload 1000 features at a time. If the features are very simple, `-c 10000` may also be approproate. As long as the chunk size is below the size of the API gateway, this will speed up your upload. The CLI will notify you if there is an upload error. Note that if you need to restart your upload, existing features will not be duplicated.
 
-##### Upload and stream large CSV and GeoJSON files
+##### Upload and Stream Large CSV and GeoJSON Files
 
 To upload very large CSV and GeoJSON files to your XYZ space, will will need to use `-s` -- this will stream the file and avoid Node.js memory errors. (It will also be considerably faster than the standard upload method.)
 
@@ -197,7 +197,7 @@ To upload very large CSV and GeoJSON files to your XYZ space, will will need to 
 
     HERE XYZ is a database. Databases trade off storage space for speed, and your data will always take up more space in XYZ than it does in a static file. When a file is uploaded into an XYZ Space, features, their properties, and the geometries are broken out into multiple tables, indexed and tagged. All of this lets you query your geospatial data on demand, and access it dynamically as vector tiles. You can check the size of your XYZ Spaces in your account dashboard or the CLI.
 
-##### Upload a shapefile
+##### Upload a Shapefile
 
 ```
 here xyz upload -f /Users/dhatb/data.shp
@@ -217,7 +217,7 @@ More tips in the [Working with Shapefiles](../shapefiles) tutorial.
     another command directly into the input stream of the HERE CLI like
     `cmd | here xyz upload YOUR_SPACE_ID`
 
-##### Upload with a unique ID
+##### Upload with a Unique ID
 
 ```
 here xyz upload -f data.csv -i unique_id
@@ -235,14 +235,14 @@ By default, the CLI will generate a unique feature ID during upload based on a h
 !!! warning 
     Many GIS systems will simply assign incrementing integers as feature IDs to every file. These can conflict across files.
 
-##### Upload and assign tags 
+##### Upload and Assign Tags 
 
 Tags are special properties that can be added to a feature that makes it easy to query them from the XYZ API using the `&tags=` parameter.
 
 !!! note XYZ Tags should be used selectively, ideally using [Rule-Based Tags]()
 . Tags are not meant to be a replacement for  [Property Search](#property-search) as you will be duplicating existing data in a record.
 
-###### Assign tags interactively
+###### Assign Tags Interactively
 
 ```
 here xyz upload -f file.geojson -a
@@ -250,7 +250,7 @@ here xyz upload -f file.geojson -a
 
 Uploads data and allows users to select tags from a list of feature keynames, with a preview of the first few values. 
 
-##### Assign tags using property names
+###### Assign Tags Using Property Names
 
 ```
 here xyz upload -f file.geojson -p treatment
@@ -263,7 +263,7 @@ Uploads data and adds the value of the selected feature property as tag. These t
 treatment@green_paint, treatment@sharrows, treatment@hit_post
 ```
 
-#### Show contents of a space
+#### Show Contents of a Space
 
 ```
 here xyz show YOUR_SPACE_ID
@@ -365,7 +365,7 @@ Clear data from your space. You clear the entire space, or clear by tag or featu
 `-h --help` output usage information
 
 
-#### List all tokens
+#### List All Tokens
 
 ```
 here xyz token
@@ -380,7 +380,7 @@ YOUR_TOKEN_NR_1 PERMANENT 1534451767 xyz-hub=readFeatures,createFeatures,updateF
 YOUR_TOKEN_NR_2 PERMANENT 1534516620 xyz-hub=readFeatures
 ```
 
-#### Get more information about your spaces
+#### Get More Information about Your Spaces
 
 !!! Note "To use this feature, your account needs access to the XYZ Pro Services." [Learn more about XYZ Pro features here](../xyz_pro).
 
@@ -397,7 +397,7 @@ You can use the `config` command to get and update information about your spaces
 `  -r, --raw                  ` show raw output
 `  -h, --help                 ` output usage information
 
-##### Get information about a space
+##### Get Information about a Space
 
     here xyz config SPACE_ID
     
@@ -407,7 +407,7 @@ You can see the raw `json` response from the `/statistics` endpoing using `-r`:
 
         here xyz config SPACE_ID -r
 
-##### Get a list of tags and properties used in a space
+##### Get a List of Tags and Properties Used in a Space
 
 You can get more details about a space by using the `--stats` option. This will return the number of features, the size of the space, the bbox, geometry types, names and counts of tags, as well as the names of properties (and if they can be accessed via Property Search).
 
@@ -416,13 +416,13 @@ You can get more details about a space by using the `--stats` option. This will 
 !!! Tip 
     Use `here xyz analyze` to get a count and list of values of a property in a space. This is best suited for qualitative values. Only the first 500,000 features in a space will be analyzed.
 
-##### Update the title and description of a space
+##### Update the Title and Description of a Space
 
 To update the title and/or description of a space:
 
     here xyz config -t "A meaningful title for a space" -d "additional details about this space that future you will appreciate 6 months from now"
 
-##### Share a space
+##### Share a Space
 
 You can share a space with other users using the `--shared` option. If they have an XYZ account, they will be able to read from that space using their own tokens (and any data transfer will be charged to their XYZ account).
 
@@ -433,7 +433,7 @@ You can disable sharing by passing a `false` parameter:
     here xyz config spaceID --shared false
 
 
-##### Update, upload, or delete a schema definition
+##### Update, Upload, or Delete a Schema Definition
 
 !!! Note "To use this feature, your account needs access to the XYZ Pro Services." [Learn more about XYZ Pro features here](../xyz_pro).
 
@@ -484,11 +484,11 @@ The `join` command simplifies use of virtual spaces when using CSV tables and ex
     
     You can update this "csv space" using `here xyz upload spaceID -f new.csv -k id --noGeom` and the next time the virtual space ID is references, the properties will contain the updated values.
     
-#### Spatial search
+#### Spatial Search
 
 
     
-#### GIS functions
+#### GIS Functions
 
 !!! Note "To use this feature, your account needs access to the XYZ Pro Services." [Learn more about XYZ Pro features here](../xyz_pro).
 
@@ -518,7 +518,7 @@ Hexbins are tagged by zoom level, width, and type, making it easy to extract one
 
 You can learn more about hexbins and how to display them [in this tutorial](../hexbins).
 
-##### Data contained in XYZ Hexbins
+##### Data Contained in XYZ Hexbins
 
 Hexbin features contain various values that can help with analysis and visualization:
 - `count`: the number of points in a hexbin 
@@ -550,7 +550,7 @@ Hexbin features contain various values that can help with analysis and visualiza
       }
 ```
 
-##### Hexbin sum and average
+##### Hexbin Sum and Average
 
 If a property is qualitative (property values, income, population), in addition to counting points, XYZ Hexbins can add up the value of the properties in each hexbin as well as calculate the average.
 
@@ -565,7 +565,7 @@ If a property is qualitative (property values, income, population), in addition 
         }
 ```
         
-##### Hexbin subcounts
+##### Hexbin Subcounts
 You can also specify a `subcount` within each hexbin based upon the count of the values of particular property.
 
     `here xyz hexbin spaceID -z 8-12 -p business_type`
@@ -621,4 +621,3 @@ This would create a `subcount` object in each hexbin, which would contain the re
 `  -h, --help                    ` output usage information
 
 You can create hexbins either by width in meters, or use preset widths appropriate to the zoom level.
-
