@@ -1,6 +1,6 @@
-# Work with Activity Log
+## Work with Activity Log
 
-## Space configuration
+### Space configuration
 
 !!! Note "Your account needs access to the XYZ Pro Services."
 
@@ -91,7 +91,7 @@ A full space definition with this feature enabled looks like this:
 }
 ```
 
-## Written features
+### Written features
 
 ***
 The features written to the new space are stored by uuid. So the space with this feature enabled needs to have **enableUUID** set to true.

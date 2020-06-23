@@ -1,4 +1,4 @@
-# Use Schema Validation
+## Use Schema Validation
 
 !!! Note "Your account needs access to the XYZ Pro Services."
 
@@ -24,7 +24,7 @@ the param *schema*:
 
 !!! Note "If you use an URL please make sure that the URL is public accessible."
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -49,7 +49,7 @@ POST /spaces
 
 !!! Warning "The $id properties of the schema must not include whitespace characters"
 
-## Response
+### Response
 
 ```json5
 {
@@ -73,7 +73,7 @@ POST /spaces
 Please note that the field *schema* has been replaced with a field *schemaUrl*
 that points to a private copy in the XYZ S3 bucket.
 
-## Validating your data
+### Validating your data
 
 Just POST/PUT your data like you would without Schema Validation. If the
 features are valid they will be stored. All failing objects will **NOT** be
@@ -81,7 +81,7 @@ stored and position, ID (if set by the developer) and error messages will be
 returned. Please note that the position is zero based, so 0 is the first object,
 1 the second and so on.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -91,7 +91,7 @@ PUT /spaces/{spaceId}/features
 
 with the corresponding body:
 
-### Request body
+#### Request body
 
 ```json5
 {
@@ -135,7 +135,7 @@ with the corresponding body:
 }
 ```
 
-### Response
+#### Response
 
 ```json5
 {
@@ -193,12 +193,12 @@ features failed because the first (position 0) has a typo in *properties* and so
 it missing the *properties.name* field. The last feature (position 2) is missing
 a *geometry* field.
 
-## Upload a new schema
+### Upload a new schema
 
 To use a different JSON schema you need to update the space definition with the
 new schema JSON string or URL.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -221,7 +221,7 @@ PATCH /spaces/{spaceId}
 }
 ```
 
-## Response
+### Response
 
 ```json5
 {
@@ -242,14 +242,14 @@ PATCH /spaces/{spaceId}
 }
 ```
 
-## Disabling Schema Validation
+### Disabling Schema Validation
 
 To disable the Schema Validation just update the space definition but not send
 the *schema-validator* processor definition. Please note that you have to
 include **all other** processor definitions if there are multiple; otherwise
 you will disable all processors.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -265,7 +265,7 @@ PATCH /spaces/{spaceId}
 }
 ```
 
-## Response
+### Response
 
 ```json5
 {

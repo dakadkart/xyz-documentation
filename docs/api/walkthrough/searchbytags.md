@@ -1,12 +1,12 @@
-# Search by Tags
+## Search by Tags
 
 !!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
 
 Do you have Tags assigned to your features? Then you can search your features by them, like so:
 
-## Simple Search
+### Simple Search
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -14,7 +14,7 @@ Do you have Tags assigned to your features? Then you can search your features by
 GET /spaces/{spaceId}/search?tags=mountain
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -53,11 +53,11 @@ GET /spaces/{spaceId}/search?tags=mountain
 }
 ```
 
-## Advanced Search
+### Advanced Search
 
 This was just the simplest version of a search by tags.  Imagine having all the restaurants of your city or your region in your space. Of course you have tagged them diligently by food category, food type and cuisine. A user of your application could be interested in eating Indian food tonight if it was vegan. He would settle for vegetarian if there were only non-vegan Indian restaurants. The search request for the HERE XYZ Hub could look something like that:
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -65,7 +65,7 @@ This was just the simplest version of a search by tags.  Imagine having all the 
 GET /spaces/{spaceId}/search?tags=vegan+indian,vegetarian
 ```
 
-### Response
+#### Response
 
 ```JSON
 {

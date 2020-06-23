@@ -1,10 +1,10 @@
-# Work with Features
+## Work with Features
 
-## Reading Features in a Space by ID
+### Reading Features in a Space by ID
 
 The following request queries a single feature using the ID of the feature.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -12,7 +12,7 @@ The following request queries a single feature using the ID of the feature.
 GET /spaces/{spaceId}/features/{featureId}
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -39,11 +39,11 @@ GET /spaces/{spaceId}/features/{featureId}
 }
 ```
 
-## Reading Features of a Space
+### Reading Features of a Space
 
 For querying multiple features in a space use the following request.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -51,7 +51,7 @@ For querying multiple features in a space use the following request.
 GET /spaces/[spaceId}/features?id={featureId1},{featureId2},{featureId3}
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -89,11 +89,11 @@ GET /spaces/[spaceId}/features?id={featureId1},{featureId2},{featureId3}
 }
 ```
 
-## Getting a Feature Count
+### Getting a Feature Count
 
 Here is an example of getting the number of features in a space.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -101,7 +101,7 @@ Here is an example of getting the number of features in a space.
 GET /spaces/{spaceId}/count
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -111,7 +111,7 @@ GET /spaces/{spaceId}/count
 }
 ```
 
-## Creating/Replacing Features
+### Creating/Replacing Features
 
 To create features in a space or to replace existing ones you can use the following request.
 
@@ -119,7 +119,7 @@ To create features in a space or to replace existing ones you can use the follow
 
 To keep already existing features use [this request](#modifying-space-features).
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -165,7 +165,7 @@ with the following body
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -207,11 +207,11 @@ with the following body
 }
 ```
 
-## Modifying Features
+### Modifying Features
 
 This is an example for modifying existing features using a POST request.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -257,7 +257,7 @@ with the following body
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -299,7 +299,7 @@ with the following body
 }
 ```
 
-## Partially Updating Features in Space
+### Partially Updating Features in Space
 
 This request contains only the feature properties you want to add, update or delete.
 
@@ -307,7 +307,7 @@ This request contains only the feature properties you want to add, update or del
 - If the property has another value of the latest version of the feature it is updated to the value in the request
 - If the property value is null in the request, the property is deleted from the feature object
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -340,7 +340,7 @@ A PATCH request needs something like the following body
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -377,7 +377,7 @@ A PATCH request needs something like the following body
 }
 ```
 
-## Validation Errors
+### Validation Errors
 
 If you are using the validation feature, you sometimes will get an error message when uploading or modifying features, such as this one:
 
@@ -401,11 +401,11 @@ The *id* is the id you sent. If you did not send one, the id will be null as in 
 *Position* is the position (zero-based) in the uploaded feature collection.  
 The *message* contains the schema validation errors with a detailed description of what does not confirm to your schema.
 
-## Searching a Space for Features
+### Searching a Space for Features
 
 There are two ways of searching a space. /search is one of them, the other is [/iterate](#iterating-features-from-specific-spaces). This does not order the results and it does not enable you to continue the search.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -413,7 +413,7 @@ There are two ways of searching a space. /search is one of them, the other is [/
 GET /spaces/{spaceId}/search
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -455,11 +455,11 @@ GET /spaces/{spaceId}/search
 }
 ```
 
-## Iterating Features from Specific Spaces
+### Iterating Features from Specific Spaces
 
 This is the second way to search a space (the other, you guessed it, is [/search](#searching-a-space-for-features)). Iterate allows you to iterate over all the matching features with the handle *handle* as a query parameter
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -467,7 +467,7 @@ This is the second way to search a space (the other, you guessed it, is [/search
 GET /spaces/{spaceId}/iterate
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -509,11 +509,11 @@ GET /spaces/{spaceId}/iterate
 }
 ```
 
-## Deleting Multiple Features
+### Deleting Multiple Features
 
 You can get rid of specific features by sending this request with their feature IDs
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -521,7 +521,7 @@ You can get rid of specific features by sending this request with their feature 
 DELETE /spaces/{spaceId}/features?id={id1},{id2}
 ```
 
-### Response
+#### Response
 
 ```HTTP
 HTTP/1.1 204 No Content

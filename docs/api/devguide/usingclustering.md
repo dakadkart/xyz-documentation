@@ -1,9 +1,9 @@
-# Use Clustering
+## Use Clustering
 
 This section describes how to retrieve features from XYZ Hub inside a tile or bounding-box in a
 clustered form.
 
-## Get clustered Features in a Bounding Box
+### Get clustered Features in a Bounding Box
 
 While retrieving features from Spaces inside a tile or bounding box you can use the "hexbin"
 clustering to visualize your data as hexagons. Each hexagon represents the features of the area it
@@ -14,7 +14,7 @@ The hexbin algorithm divides the world in hexagonal "bins" on a specified resolu
 Each hexagon has an address being described by the H3 addressing scheme.
 For more information on that topic see: https://eng.uber.com/h3/
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getFeaturesByTile)*
 
@@ -33,7 +33,7 @@ The following clustering related parameters can be passed and combined with the 
 |clustering.pointmode | boolean [true\|false] | optional | returns the centroid of the hexagons as geojson-features geometry  |
 
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -76,8 +76,9 @@ The following clustering related parameters can be passed and combined with the 
 }
 ```
 
-### Miscellaneous
-#### Maximum Resolution for zoomlevel
+#### Miscellaneous
+
+##### Maximum Resolution for zoomlevel
 
 The parameter clusterning.resolution specifies the size of the hexagons wanted.
 ( s. https://uber.github.io/h3/#/documentation/core-library/resolution-table )
