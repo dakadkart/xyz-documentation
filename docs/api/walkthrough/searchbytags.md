@@ -1,6 +1,9 @@
 ## Search by Tags
 
-!!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
+
+> #### Note 
+> The endpoint for the API is https://xyz.api.here.com/hub.
+
 
 Do you have Tags assigned to your features? Then you can search your features by them, like so:
 

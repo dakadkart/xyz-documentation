@@ -1,6 +1,9 @@
 ## Use Schema Validation
 
-!!! Note "Your account needs access to the XYZ Pro Services."
+
+> #### Note 
+> Your account needs access to the XYZ Pro Services.
+
 
 To use Schema Validation you need to put additional data into the space
 definition. Please add a processor with the ID *schema-validator* and put
@@ -22,7 +25,10 @@ the param *schema*:
 }
 ```
 
-!!! Note "If you use an URL please make sure that the URL is public accessible."
+
+> #### Note 
+> If you use an URL please make sure that the URL is public accessible.
+
 
 ### Request
 
@@ -47,7 +53,10 @@ POST /spaces
 }
 ```
 
-!!! Warning "The $id properties of the schema must not include whitespace characters"
+
+> #### Warning 
+> The $id properties of the schema must not include whitespace characters.
+
 
 ### Response
 

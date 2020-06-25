@@ -1,8 +1,8 @@
-# Read Spaces
+## Read Spaces
 
-Once you have acquired your credentials. you can find out which spaces you have access to.
+Once you have acquired your credentials, you can determine the spaces to which you have access.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
 
@@ -10,7 +10,7 @@ Once you have acquired your credentials. you can find out which spaces you have 
 GET /spaces
 ```
 
-## Response
+### Response
 
 ```JSON
 [

@@ -1,17 +1,22 @@
-The GeoJSON Tool is a web based visualization tool for [GeoJSON data](../api/concepts/geojsonbasics.md)
+## Overview
+
+The GeoJSON Tool is a web based visualization tool for [GeoJSON data](topics/geojsonbasics.md)
 that can quickly display data from
 a various sources, highlight and inspect specific features and supports even complex operations
 like finding data based on content.
 
-!!! tip "GeoJSON Tool URL"
-    Bookmark the GeoJSON Tool at:
-    [`http://geojson.tools/`](http://geojson.tools/)
+> #### Hint
+> GeoJSON Tool URL
+> Bookmark the GeoJSON Tool at:
+>[![`http://geojson.tools/`](http://geojson.tools/)]
 
-[![XYZ GeoJSON Tool](../assets/images/viewer.png)](../assets/images/viewer.png)
+
+
+[![XYZ GeoJSON Tool](images/viewer.png)](images/viewer.png)
 
 ## Getting around
 
-[![Tool Overview](../assets/images/viewer-parts.png)](../assets/images/viewer-parts.png)
+[![Tool Overview](images/viewer-parts.png)](images/viewer-parts.png)
 
 
 ### Map (1)
@@ -25,14 +30,14 @@ You can freely navigate around and zoom in and out to get a better view.
 You can also use the controls in the bottom right hand corner of the map view to zoom in and out, as
 well as switching the background map style.
 
-[![Tool Overview](../assets/images/viewer-map-controls.png)](../assets/images/viewer-map-controls.png)
+[![Tool Overview](images/viewer-map-controls.png)](images/viewer-map-controls.png)
 
 #### Full Page Map
 
 Use the button in the top right hand corner to maximize the map to the full page to get a better view
 of the data in context.
 
-[![Tool Overview](../assets/images/viewer-map-full.png)](../assets/images/viewer-map-full.png)
+[![Tool Overview](images/viewer-map-full.png)](images/viewer-map-full.png)
 
 #### Data Overlay
 
@@ -40,14 +45,14 @@ When you work with data on the map and select one feature, this features highlig
 magenta color. At the same time, the payload properties are shown in a heads-up data overlay in
 the top left hand corner of the map, where you can drill down into the individual attributes
 
-[![Tool Overview](../assets/images/viewer-map-hud.png)](../assets/images/viewer-map-hud.png)
+[![Tool Overview](images/viewer-map-hud.png)](images/viewer-map-hud.png)
 
 ### Editor (2)
 
 On the right hand side of the page you see the GeoJSON text editor. Here you can type or paste
 GeoJSON describing the features you want to see on the map.
 
-[![Tool Overview](../assets/images/viewer-editor.png)](../assets/images/viewer-editor.png)
+[![Tool Overview](images/viewer-editor.png)](images/viewer-editor.png)
 
 !!! info "GeoJSON structure"
     You will notice that the editor does some automatic formatting on the text you are typing
@@ -66,14 +71,14 @@ GeoJSON describing the features you want to see on the map.
     missing a bracket or a comma can make your GeoJSON invalid for display. The editor tries to give you a hint
     by showing a marker in the margin:
 
-    [![Tool Overview](../assets/images/viewer-editor-syntax.png)](../assets/images/viewer-editor-syntax.png)
+    [![Tool Overview](images/viewer-editor-syntax.png)](images/viewer-editor-syntax.png)
 
 
 ### Location bar (3)
 
 On top of the map you find the Location bar. It allows you to quickly jump to any coordinate you enter:
 
-[![Tool Overview](../assets/images/viewer-bar.png)](../assets/images/viewer-bar.png)
+[![Tool Overview](images/viewer-bar.png)](images/viewer-bar.png)
 
 
 ### Loading Data (4)
@@ -90,10 +95,10 @@ There are of course more ways to get data into the viewer than typing into the e
     on the map.
 
 
-[![Tool Overview](../assets/images/viewer-load.png)](../assets/images/viewer-load.png)
+[![Tool Overview](images/viewer-load.png)](images/viewer-load.png)
 
 When data was loaded into the viewer, you either get a confirmation or a warning banner depending on if the
 source could processed or not.
 
-[![Tool Overview](../assets/images/viewer-load-banner.png)](../assets/images/viewer-load-banner.png)
+[![Tool Overview](images/viewer-load-banner.png)](images/viewer-load-banner.png)
 

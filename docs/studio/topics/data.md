@@ -24,11 +24,14 @@ of available datasets and them to you map project.
 Data is then shared between all map projects and changes to the data are
 reflected in each map project immediate.
 
-!!! note 
-    Data and style are handled separately. All data is stored in the Hub
-    but each project can define different styles even for the same data.
-    You can also safely rename layers individually without breaking the link
-    to the dataset.
+
+> #### Note
+> Data and style are handled separately. All data is stored in the Hub
+> but each project can define different styles even for the same data.
+> You can also safely rename layers individually without breaking the 
+> link to the dataset. 
+    
+
 
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/pick-datasets.mp4).
 
@@ -48,9 +51,10 @@ really need to see the data in a _table_ to understand the content.
 You can also change the data content, sort and look for data and add 
 additional columns.
 
-!!! note
-    The table shows data from one layer or dataset. You might have to 
-    select the layer you want to see before you can switch to the table view.
+
+> #### Note
+> The table shows data from one layer or dataset. You might have to
+> select the layer you want to see before you can switch to the table view.
 
 
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/data-table.mp4).

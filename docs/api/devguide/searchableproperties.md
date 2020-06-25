@@ -1,6 +1,9 @@
-# Adjust Searchable Properties
+## Adjust Searchable Properties
 
-!!! Note "Your account needs access to the XYZ Pro Services."
+
+> #### Note 
+Your account needs access to the XYZ Pro Services.
+
 
 This section describes how to use the extended capability of enabling property-search for
 user-specified properties of your GeoJSON features inside a space. 
@@ -8,7 +11,7 @@ user-specified properties of your GeoJSON features inside a space.
 It is recommended that you read the ["properties-search"](propertiessearch.md) guide before going on
 with this more specific guide.
 
-## Searching for features in a space
+### Searching for features in a space
 
 If the above prerequisites are fulfilled, adjusting the searchable properties can be done by
 updating the space's `searchableProperties` property. This can be done using a `PATCH` request to
@@ -42,7 +45,7 @@ Nested properties can be specified using the dot-notation e.g.:
 
 *Remember: In a `PATCH`-operation only the properties to be changed are necessary*
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit%20Spaces/patchSpace)*
 
@@ -62,7 +65,7 @@ with the following body
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {

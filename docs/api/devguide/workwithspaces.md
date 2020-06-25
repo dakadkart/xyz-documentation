@@ -1,6 +1,6 @@
 ## Work with Spaces
 
-### Creating a Space
+### Create a Space
 
 #### Request
 
@@ -29,7 +29,7 @@ As it is a POST request, it has to have at least the following body.
 }
 ```
 
-### Reading a Specific Space
+### Read a Specific Space
 
 #### Request
 
@@ -49,7 +49,7 @@ GET /spaces/{spaceId}
 }
 ```
 
-## Reading all Spaces
+## Read all Spaces
 
 #### Request
 
@@ -76,7 +76,7 @@ GET /spaces
 ]
 ```
 
-### Updating a Space
+### Update a Space
 
 #### Request
 
@@ -104,7 +104,7 @@ which requires a body like the following:
 }
 ```
 
-### Deleting a Space
+### Delete a Space
 
 #### Request
 

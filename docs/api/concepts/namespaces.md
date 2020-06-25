@@ -1,10 +1,10 @@
-# Namespaces
+## Namespaces
 
-Namespaces are used to group objects unambiguously, so they can be addressed without confusion. They are used in several areas like XML and Object-oriented programming, to name a few.
+Namespaces are used to group objects unambiguously, so they can be addressed without confusion. They are used in several areas like XML and Object-oriented programming.
 
-## Example
+### Example
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -35,7 +35,7 @@ with the following body
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {

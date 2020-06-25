@@ -68,7 +68,11 @@ Depending on the size of the shapefile you may be able to pipe the geojson from 
 
 	mapshaper my_geodata.shp -o format=geojson - | here xyz upload spaceID -a -t specific_tag
 	
-_Note: While you normally can use `upload` without specifying an XYZ Space ID, you need to do so when piping._
+
+> #### Note
+> While you normally can use `upload` without specifying an XYZ Space ID, you need to 
+> do so when piping.
+
 
 You can also stream it, which will upload your data much more quickly:
 	
@@ -138,7 +142,11 @@ While GeoJSON and CSVs can be streamed via the `upload -s` option, this option i
 	mapshaper big_data.shp -o format=geojson big_data.geojson
 	here xyz upload spaceID -f big_data.geojson -s
 	
-_Note that `-a` is not available when `-s` is used, but you can still specify properties to convert into tags using `-p`._
+
+> #### Note
+> `-a` is not available when `-s` is used, but you can still specify properties to convert 
+> into tags using `-p`.
+
 
 You can also open the very large shapefile in QGIS and save directly to an XYZ space using the XYZ QGIS plugin, though this will be slower than using the CLI streaming feature as the QGIS plugin is not multi-threaded.
 	
@@ -154,4 +162,3 @@ If you see any `node.js` memory errors, you can break it up into two steps:
 	here xyz upload spaceID -f different_projection.geojson
 	
 If you continue to see errors, you may want to try opening the shapefile in QGIS or use GDAL's `ogr2ogr` conversion tools.
-

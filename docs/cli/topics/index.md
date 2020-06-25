@@ -6,8 +6,12 @@ We think developers deserve an easy to use, convenient and streamlined experienc
 
 <script id="asciicast-ohII9SQNs1RIuaSkfAO5UgHlX" src="https://asciinema.org/a/ohII9SQNs1RIuaSkfAO5UgHlX.js" async></script>
 
-!!! tip "HERE CLI on GitHub"
-    [HERE CLI is Open Source](https://github.com/heremaps/here-cli), where developers like yourself can contribute new functionality and features.
+
+> #### Note
+> HERE CLI on GitHub:
+> [HERE CLI is Open Source](https://github.com/heremaps/here-cli), where developers like
+>  yourself can contribute new functionality and features.
+    
 
 In this section, we will quickly introduce you to the HERE CLI, how to install it and how to make the
 most of it while working on your project. There are many more tips in the [CLI Tutorial](https://developer.here.com/tutorials/using-the-xyz-cli/).s
@@ -85,7 +89,9 @@ version of HERE CLI with following command:
 npm install -g @here/cli
 ```
 
-!!! note "Administrative permissions"
+> #### Note 
+> Administrative permissions.
+
 
     Depending on your system, you might need elevated system permissions to install **globally** with `-g`,
     which essentially means you can call the `here` command from anywhere.
@@ -107,9 +113,13 @@ When prompted, enter your email and password that you use in the HERE Developer 
 The CLI will immediately try to *verify* if the entries can be
 used to log into HERE XYZ and report back to you accordingly.
 
-!!! question "Where is my login information stored?"
 
-    Don't worry, the information entered is safely stored and encrypted on your local machine (if you are curious, look for a file called `.herecli` in your home directory
-    which contains the configuration data)
+> #### Info
+> Question: Where is my login information stored?
+> Don't worry, the information entered is safely stored and encrypted on your 
+> local machine (if you are curious, look for a file called `.herecli` in your 
+> home directory which contains the configuration data).
+
+    
     
 To learn more about the HERE CLI's advanced options, take a look at the [detailed tutorial](https://developer.here.com/tutorials/using-the-xyz-cli/).

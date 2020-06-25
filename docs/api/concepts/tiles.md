@@ -1,4 +1,4 @@
-# Tiles
+## Tiles
 
 The XYZ Hub API supports the following tile identifiers:
 
