@@ -6,24 +6,25 @@
 
 Selecting an entire feature object in editor this will be zoom to in the map and highlighted with a magenta color.
 
-[![Tool Overview](../assets/images/viewer-locating-content-1.png)](../assets/images/viewer-locating-content-1.png)
+[![Tool Overview](https://www.here.xyz/assets/images/viewer-locating-content-1.png)](https://www.here.xyz/assets/images/viewer-locating-content-1.png)
+
 
 Selecting any latitude and longitude of geometry from the editor, this point will be centered and highlighted on that map.
 
-[![Tool Overview](../assets/images/viewer-locating-content-2.png)](../assets/images/viewer-locating-content-2.png)
+[![Tool Overview](https://www.here.xyz/assets/images/viewer-locating-content-2.png)](https://www.here.xyz/assets/images/viewer-locating-content-2.png)
 
 #### From map to editor
 
 Clicking on rendered feature on map it will be highlighted with magenta color and cursor will jump to respective feature in editor
 
-[![Tool Overview](../assets/images/viewer-locating-content-3.png)](../assets/images/viewer-locating-content-3.png)
+[![Tool Overview](https://www.here.xyz/assets/images/viewer-locating-content-3.png)](https://www.here.xyz/assets/images/viewer-locating-content-3.png)
 
 ### Filtering data
 Selecting a feature on map, clicking on a property label in the feature explorer pop-up card,this will highlight all features with that same property value.
 
 !!! example
     After clicking on the `vehicle_type` label in the overlay, all features with that same value (e.g. bus) are highlighted magenta
-    [![Tool Overview](../assets/images/viewer-filtering-data.png)](../assets/images/viewer-filtering-data.png)
+    [![Tool Overview](https://www.here.xyz/assets/images/viewer-filtering-data.png)](https://www.here.xyz/assets/images/viewer-filtering-data.png)
 
 ### Styling hints
 When some styling hints are present in the feature it renders with the given style on the map. Examples are the following
@@ -37,7 +38,7 @@ key/value pairs for defining the line and fill styles:
     "fill-opacity": 0.6
 ```
 
-[![Tool Overview](../assets/images/viewer-styling-hints.png)](../assets/images/viewer-styling-hints.png)
+[![Tool Overview](https://www.here.xyz/assets/images/viewer-styling-hints.png)](https://www.here.xyz/assets/images/viewer-styling-hints.png)
 
 ### Data URL
 
@@ -56,11 +57,4 @@ The GeoJSON tool can be used to embed a map with features on any web page using 
 !!! example
     http://geojson.tools/?url=http://cms.in.here.com/v2/road/pvid/809297026?clientId=sis&maponly=true
 
-    [![Tool Overview](../assets/images/maponly.png)](../assets/images/maponly.png)
-
-
-
-
-
-
-
+   [![Tool Overview](https://www.here.xyz/assets/images/maponly.png)](https://www.here.xyz/assets/images/maponly.png)

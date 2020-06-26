@@ -54,11 +54,11 @@ nav:
   - Introduction: index.md
   - Getting Started: getting-started.md
   - XYZ Studio:
-      - Quick Tour: studio/index.md
-      - Navigating: studio/navigating.md
-      - Data: studio/data.md
-      - Styling: studio/styles.md
-      - Publishing: studio/publish.md
+      - Quick Tour: studio/topics/index.md
+      - Navigating: studio/topics/navigating.md
+      - Data: studio/topics/data.md
+      - Styling: studio/topics/styles.md
+      - Publishing: studio/topics/publish.md
   - XYZ APIs:
       - XYZ Hub API:
           - Overview: api/index.md
@@ -103,17 +103,17 @@ nav:
           - Add interactivity: ui/tapfeature.md
   - Tools:
       - HERE CLI:
-          - Overview: cli/index.md
-          - Commands: cli/cli.md
-          - Shapefiles: cli/shapefiles.md
-          - Hexbins: cli/hexbins.md
-      - XYZ Space Invader: space-invader/index.md
+          - Overview: cli/topics/index.md
+          - Commands: cli/topics/cli.md
+          - Shapefiles: cli/topics/shapefiles.md
+          - Hexbins: cli/topics/hexbins.md
+      - XYZ Space Invader: cli/space-invader/index.md
       - GeoJSON Viewer:
-          - Overview: viewer-tool/index.md
+          - Overview: cli/viewer-tool/index.md
           - GeoJSON Basics: api/concepts/geojsonbasics.md
-          - Advanced Features: viewer-tool/advanced.md
+          - Advanced Features: cli/viewer-tool/advanced.md
       - Open Datasets:
-          - Buildings: microsoft-buildings.md
+          - Buildings: cli/topics/microsoft-buildings.md
   - Releases:
       - Release notes: release-notes.md
   - Tutorials:
