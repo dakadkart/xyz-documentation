@@ -1,10 +1,8 @@
-# Hexbins
-
-## Create Hexbins with the HERE CLI
+## Creating hexbins with the HERE CLI
 
 The `hexbin` command in the HERE CLI lets you easily create hexbins and their centroids from large, dense point datasets in your XYZ spaces. Hexbins can be useful for data analysis, and can also allow you to visualize datasets that are too large to effectively view at low (regional or national) map zoom levels.
 
-## Get Started
+## Getting started
 
 If you don't already have a set of points in an XYZ space, you can upload them using the CLI.
 
@@ -16,31 +14,21 @@ If you don't have data handy, you can use this CSV of [bicycle parking in San Fr
 
 	here xyz upload -f "https://data.sfgov.org/api/views/hn4j-6fx5/rows.csv"
 	
+	
 You'll be prompted to enter a title and description, and XYZ will generate a unique ID for your dataset. Copy this as you'll need it to access the data and generated hexbins.
 
-
-> #### Note 
-> Some of the features in this file do not have any coordinates -- the HERE CLI reports 
-> these as errors.
+!!! note some of the features in this file do not have any coordinates -- the HERE CLI will report these as errors.
 	
-
 After the upload finishes, you can preview the map using geojson.tools 
 
     	here xyz show spaceID -w 
 
-[![Experimental](https://www.here.xyz/assets/images/xyz-hexbin-geojson-tools.png)](https://www.here.xyz/assets/images/xyz-hexbin-geojson-tools.png)
-
-or [XYZ Space Invader](https://developer.here.com/tutorials/using-the-xyz-cli/images/space_invader_rank.png). 
-
-
-> #### Note 
-> It will be easier to view data sets larger than a few hundred points using XYZ Space Invader.
+or [XYZ Space Invader](../space-invader/tutorial.md). (Note it will be easier to view data sets larger than a few hundred points using XYZ Space Invader.)
 	
-
 	here xyz show spaceID -v 
 	
 
-### Create Hexbins
+### Creating hexbins
 
 Hexbins have a width in meters. You can set this manually using `-c`, but you also can use `-z` to generate a hexbin grid that fits well with a particular slippy map zoom level.
 
@@ -66,7 +54,7 @@ XYZ Hexbins will generate a hexagonal grid for each zoom level (or width) that y
 It also tracks the maximum count seen in that grid, and after the pass is completed, it writes that `maxCount` value to each hexbin. An `occupancy` rate is then calculated for each hexbin relative to the rest of that grid, and a scaled `hsla` color value is written to the feature for display convenience (blue is low, red is high).
 
 
-### Use Tags with Hexbin Data
+### Using tags with hexbin data
 
 If we generate hexbins for XYZ space containing the bike parking locations...
 
@@ -83,7 +71,7 @@ the CLI will generate tags so you can pull out the hexbins and centroids for eac
 	...
 	
 	
-Note that the CLI also creates centroids for each hexbin. This is useful for an alternate display method as well as for labels. You can use XYZ tags to pull these out separately from the hexbins.
+Note tha the CLI also creates centroids for each hexbin. This is useful for an alternate display method as well as for labels. You can use XYZ tags to pull these out separately from the hexbins.
 
 After you generate the hexbins from an XYZ space, you can view them with any GeoJSON viewer. If you want to view just the zoom 11 hexbins, you can use the `-t` option with view:
 
@@ -91,9 +79,11 @@ After you generate the hexbins from an XYZ space, you can view them with any Geo
 	
 For convenience, here is a link to that data. Note the `&tags=zoom11_hexbin` -- that tells the XYZ API to only return features with that tag, and thus that zoom level.
 
-[![Hexbin GeoJSON Tools](https://www.here.xyz/assets/images/xyz-hexbin-geojson-tools.png)](https://www.here.xyz/assets/images/xyz-hexbin-geojson-tools.png)
+http://geojson.tools/index.html?url=https://xyz.api.here.com/hub/spaces/ZGAzaLaA/search?limit=5000&clientId=cli&tags=zoom11_hexbin&access_token=APwC9OKv8ww_zMGWqPTSQdg
 
-### Data Contained in XYZ Hexbins
+![xyz-hexbin-geojson-tools](https://github.com/heremaps/xyz-documentation/blob/master/docs/assets/images/xyz-hexbin-geojson-tools.png)
+
+### Data contained in XYZ Hexbins
 
 Hexbin features contain various values that can help with analysis and visualization:
 - `count`: the number of points in a hexbin
@@ -134,11 +124,13 @@ In XYZ Space Invader, you can select properties and choose data-driven color pal
 If you do not choose a tag with `-t` in the CLI, you can select a zoom level using the tags in the right pane.
 
 
-[![xyz-hexbin-space-invader](https://www.here.xyz/assets/images/xyz-hexbin-space-invader.png)](https://www.here.xyz/assets/images/xyz-hexbin-space-invader.png)
+![xyz-hexbin-space-invader](https://github.com/heremaps/xyz-documentation/blob/master/docs/assets/images/xyz-hexbin-space-invader.png)
 
 https://s3.amazonaws.com/xyz-demo/scenes/xyz_tangram/index.html?space=ZGAzaLaA&token=APwC9OKv8ww_zMGWqPTSQdg&basemap=xyz-pixel-dark&buildings=1&label=undefined&colors=range&points=2&lines=0&outlines=0&highlight=0&places=1&roads=1&water=0&tags=zoom12_centroid&property=count&palette=colorBrewerYlOrRd&paletteFlip=true&sort=values&hideOutliers=false#12.858333333333318/37.7474/-122.4452
 
-## Advanced Options
+Click for more examples on how to use [XYZ Space Invader](../space-invader/tutorial.md).
+
+## Advanced options
 
 ### Subgroups
 
@@ -150,9 +142,7 @@ This would count the unique values of the `street_type` property in each feature
 
 Here's an example [showing street types in San Francisco](https://s3.amazonaws.com/xyz-demo/scenes/xyz_tangram/index.html?space=qAtS3e8G&token=AFbjoHrBlTB2K5_gqvcP_S8&basemap=xyz-pixel-dark&buildings=1&label=undefined&colors=range&points=2&lines=0&outlines=1&highlight=0&places=1&roads=1&water=0&tags=zoom12_hexbin&property=subcount.AVE.count&palette=colorBrewerYlGnBu&paletteFlip=true&rangeFilter=0&sort=values&hideOutliers=true#13.166666666666664/37.7568/-122.4384), where street type was chosen as a subgroup. `subcount.AVE` can be used to see where Avenue is the most common street type. You can click on `subcount.ST.count` to see the streets of San Francisco.
 
-
-[![xyz-hexbin-space-invader](https://www.here.xyz/assets/images/hexbin_subgroup.png)](https://www.here.xyz/assets/images/hexbin_subgroup.png)
-
+![xyz-hexbin-space-invader](../assets/images/hexbin_subgroup.png)
 
 For reference, [here is a sample of a subcount object](http://geojson.tools/index.html?url=https://xyz.api.here.com/hub/spaces/qAtS3e8G/search?limit=5000&clientId=cli&tags=zoom10_centroid&access_token=AFbjoHrBlTB2K5_gqvcP_S8):
 
@@ -181,7 +171,7 @@ For reference, [here is a sample of a subcount object](http://geojson.tools/inde
           },
 ```
 
-### Sum and Average
+### Sum and average
 
 If a point feature has a quantitative property, you can use `-a` to add it up within each hexbin, as well as calculate an average. These values, along with `maxSum`, is recorded in a `sum` object within each hexbin.
 
@@ -195,9 +185,9 @@ If a point feature has a quantitative property, you can use `-a` to add it up wi
 ```
 
 XYZ Space Invader can compare and color these values across the hexbin grid. [Here we see the aggregate values of Minneapolis property values summed within hexbin centroids](https://s3.amazonaws.com/xyz-demo/scenes/xyz_tangram/index.html?space=ZL228Jrk&token=AFbjoHrBlTB2K5_gqvcP_S8&basemap=xyz-pixel-dark&buildings=1&label=undefined&colors=range&points=0&lines=0&outlines=0&highlight=0&places=1&roads=1&water=0&tags=zoom13_centroid&property=sum&palette=colorBrewerYlOrRd&paletteFlip=true&rangeFilter=4&sort=values&hideOutliers=false#12.370833333333346/44.9662/-93.2612).
-    
-    
-[![Minneapolis](https://www.here.xyz/assets/images/hexbin_sum.png)](https://www.here.xyz/assets/images/hexbin_sum.png)
+
+![minneapolis](https://github.com/heremaps/xyz-documentation/blob/master/docs/assets/images/hexbin_sum.png)
+
 
 
 ### Updates
@@ -206,7 +196,7 @@ XYZ tracks the source space of a hexbin space, and vice versa. If you add zoom l
 
 You can see in the description of the space, using `here xyz config spaceID -r`. Hexbin zoom levels are also tracked.
 
-### Dynamic Zoom
+### Dynamic zoom
 
 Since each zoom level can have its own hexbins and centroids, you can dynamically select data appropriate for the zoom level of a map using tags. Here's an example of centroids and hexbins for tornados in the United States from 1950 to 2017.
 

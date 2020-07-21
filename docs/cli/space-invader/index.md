@@ -14,7 +14,7 @@ Multiple basemaps are available. Basemap properties such as roads and buildings 
 
 XYZ Space Invader can show hundreds of thousands to millions of features, though this depends greatly on geographic density of data, zoom level, and kind and complexity of the geometries involved. In general you will be able to show more points and lines than polygons at any given zoom level. We're also working on ways to intelligently handle dense data sets using tags and hexbins.
 
-## Get Started
+## To get started
 
 - [install the HERE CLI](https://www.here.xyz/cli/)
 - upload a GeoJSON file, CSV or Shapefile to an XYZ Space, and add tags based on properties https://www.here.xyz/cli/cli/
@@ -31,13 +31,7 @@ The Los Angeles Times gathers, normalizes and aggregates precinct level election
 ![ca-gov-votes-range-precinct](screenshots/ca-gov-votes-range-precinct.png)
 
 
-There are several different visualization modes that can help get you familiar with your data and prepare it for visualization. 
-
-
-> #### Note
-> These URLs are based on the latest branch -- this will change, and the root URL
-> (for now) is xyz-space-invader.netlify.com.
-
+There are several different visualization modes that can help get you familiar with your data and prepare it for visualization. _note: these URLs are based on the latest branch -- this will change, and the root URL (for now) is xyz-space-invader.netlify.com_
 
 ## Simple color selection
 
@@ -47,11 +41,7 @@ X-ray mode shows you an overview of the geometries in the space. This is especia
 
 https://xyz-space-invader.netlify.com/?space=ylnRzWDL&token=AOsE9k2EdCdT8lEX12PDZ38&basemap=refill-dark&buildings=0&outlines=1&roads=1&water=0&colors=xray#11.6/34.0256/-118.3172
 
-
-> #### Note
-> You can toggle polygon outlines on and off (either press 'o' or click on 'outlines' in 
-> the top left panel).
-
+_Note: You can toggle polygon outlines on and off (either press 'o' or click on 'outlines' in the top left panel)_
 
 ### Hash mode
 
@@ -126,7 +116,7 @@ Filter by tags to show data by
 - zip code
 - census tract (SF only)
 
-[](The income of certain counties and zip codes is so far above the average that it triggers the 4-sigma filter.)
+The income of certain counties and zip codes is so far above the average that it triggers the 4-sigma filter.
 
 ## Tags (WIP)
 
