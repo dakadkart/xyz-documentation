@@ -116,7 +116,7 @@ Filter by tags to show data by
 - zip code
 - census tract (SF only)
 
-[](The income of certain counties and zip codes is so far above the average that it triggers the 4-sigma filter.)
+The income of certain counties and zip codes is so far above the average that it triggers the 4-sigma filter.
 
 ## Tags (WIP)
 

@@ -17,13 +17,15 @@ If you don't have data handy, you can use this CSV of [bicycle parking in San Fr
 	
 You'll be prompted to enter a title and description, and XYZ will generate a unique ID for your dataset. Copy this as you'll need it to access the data and generated hexbins.
 
-!!! note some of the features in this file do not have any coordinates -- the HERE CLI will report these as errors.
+> #### Note
+> Some of the features in this file do not have any coordinates -- the HERE CLI will report 
+> these as errors.
 	
 After the upload finishes, you can preview the map using geojson.tools 
 
     	here xyz show spaceID -w 
 
-or [XYZ Space Invader](../space-invader/tutorial.md). (Note it will be easier to view data sets larger than a few hundred points using XYZ Space Invader.)
+or [XYZ Space Invader](https://developer.here.com/tutorials?category=HERE%2BStudio%2Band%2BData%2BHub). (Note it will be easier to view data sets larger than a few hundred points using XYZ Space Invader.)
 	
 	here xyz show spaceID -v 
 	
@@ -128,7 +130,7 @@ If you do not choose a tag with `-t` in the CLI, you can select a zoom level usi
 
 https://s3.amazonaws.com/xyz-demo/scenes/xyz_tangram/index.html?space=ZGAzaLaA&token=APwC9OKv8ww_zMGWqPTSQdg&basemap=xyz-pixel-dark&buildings=1&label=undefined&colors=range&points=2&lines=0&outlines=0&highlight=0&places=1&roads=1&water=0&tags=zoom12_centroid&property=count&palette=colorBrewerYlOrRd&paletteFlip=true&sort=values&hideOutliers=false#12.858333333333318/37.7474/-122.4452
 
-Click for more examples on how to use [XYZ Space Invader](../space-invader/tutorial.md).
+Click for more examples on how to use [XYZ Space Invader](https://www.here.xyz/space-invader/).
 
 ## Advanced options
 

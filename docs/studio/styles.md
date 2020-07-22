@@ -5,7 +5,7 @@ called a _style_ and there are different options between the basic primitives
 of _Points_,_Lines_ and _Polygons_. 
 
 <video width="100%"  controls>
-  <source src="../../assets/videos/simple-styles.mp4" type="video/mp4">
+  <source src="../assets/videos/simple-styles.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>   
 
@@ -17,7 +17,7 @@ well as a **Label** text coming from the feature properties. The text and icon
 can be shifted relative to the markers position to appear on top of or next to
 the marker.
 
-[![Point Styles](../../assets/images/point-styles.png)](../../assets/images/point-styles.png)
+[![Point Styles](../assets/images/point-styles.png)](../assets/images/point-styles.png)
 
 ### Lines
 
@@ -26,7 +26,7 @@ control color as well as the **Cap** style how the line ends and the the
 **Join** style which defines how two line segments connect to each other.
 You can place a **Label** on the line, which is drawn on each segment
 
-[![Line Styles](../../assets/images/line-styles.png)](../../assets/images/line-styles.png)
+[![Line Styles](../assets/images/line-styles.png)](../assets/images/line-styles.png)
 
 ### Polygons
 
@@ -36,7 +36,7 @@ adjusted (also to zero, which means no lines is drawn). A **Label** text can
 optionally be drawn at the center of the polygon, or shifted from the center
 by an offset.
 
-[![Line Styles](../../assets/images/line-styles.png)](../../assets/images/line-styles.png)
+[![Line Styles](../assets/images/line-styles.png)](../assets/images/line-styles.png)
 
 
 ## Drawing order
@@ -47,11 +47,11 @@ sheets placed one on top of another on top of the underlying map. You can
 change this order by dragging layers up or down in this list.
 
 <video width="100%"  controls>
-  <source src="../../assets/videos/drawing-order.mp4" type="video/mp4">
+  <source src="../assets/videos/drawing-order.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>   
 
-[![drawing-order](../../assets/images/drawing-order.png)](../../assets/images/drawing-order.png)
+[![drawing-order](../assets/images/drawing-order.png)](../assets/images/drawing-order.png)
 
 ## Interactive cards
 
@@ -60,7 +60,7 @@ feature they select. The **Cards** list allows re-ordering of the properties, wh
 all entries below the line will stay hidden. The first line becomes the title of the card.
 
 <video width="100%"  controls>
-  <source src="../../assets/videos/interactive-cards.mp4" type="video/mp4">
+  <source src="../assets/videos/interactive-cards.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>   
 
@@ -72,7 +72,7 @@ This is probably one of the more powerful styling features as it enables your da
 the look of the map.
 
 <video width="100%"  controls>
-  <source src="../../assets/videos/conditional-styling.mp4" type="video/mp4">
+  <source src="../assets/videos/conditional-styling.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>   
 
@@ -81,12 +81,12 @@ features this style should apply to. To narrow down the group from all features 
 you need to define one (or multiple) _conditions_ on properties which features must meet to 
 be considered part of the group. 
 
-[![Style Group Rule](../../assets/images/style-group-rule.png)](../../assets/images/style-group-rule.png)
+[![Style Group Rule](../assets/images/style-group-rule.png)](../assets/images/style-group-rule.png)
 
 
 !!! tip
     It is helpful to first get an overview of the data properties by looking at the data in 
     the table view. You can also quickly define a **new rule** for a selected feature by
     clicking on the _paint roller_ icon of the value in the form. 
-    [![Quick Style Rule](../../assets/images/quick-style-rule.png)](../../assets/images/quick-style-rule.png)
+    [![Quick Style Rule](../assets/images/quick-style-rule.png)](../assets/images/quick-style-rule.png)
 
