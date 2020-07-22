@@ -1,6 +1,10 @@
 # HERE XYZ Pro 
 
-!!! Note: These features require the [Add-On plan](developer.here.com/pricing) to use Pro features. To sign up for access these features, go to: [developer.here.com/pricing](developer.here.com/pricing)
+
+> #### Note 
+> These features require the [Add-On plan](developer.here.com/pricing) to use Pro features. 
+> To sign up for access these features, go to: [developer.here.com/pricing](developer.here.com/pricing).
+
 
 ## Property Search
 
@@ -56,8 +60,11 @@ Apply a schema validation JSON file to space to ensure that only valid data is u
 
 The schema definition can be in the form of a web address or a local schema JSON file.
 
-!!! note "Schema validation is not transactional"
-    The schema validation will be non-transactional (`Transaction = FALSE`) and will upload all the objects which pass schema definition and display the list of objects rejected.
+> #### Note 
+> Schema validation is not transactional.
+> The schema validation will be non-transactional (`Transaction = FALSE`) and uploads  
+> all the objects which pass schema definition and display the list of objects rejected.
+    
 
 ## Activity Log
 

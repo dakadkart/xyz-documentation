@@ -1,6 +1,9 @@
-# Iterate over Features
+## Iterate over Features
 
-!!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
+
+> #### Note 
+> The endpoint for the API is https://xyz.api.here.com/hub.
+
 
 Iterating over features is different from search in two ways:
 
@@ -9,7 +12,7 @@ Iterating over features is different from search in two ways:
 
 Sometimes your search will have a lot of features as a result. But the limit you explicitly set or the default limit will only return some of them. In this case, a root attribute **handle** is set in the response. The search can then be continued with the next feature in line by adding the value of the **handle** response attribute as a **handle** query parameter to the request.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
 
@@ -17,7 +20,7 @@ Sometimes your search will have a lot of features as a result. But the limit you
 GET /spaces/{spaceId}/iterate?tags=&limit=2&handle=2
 ```
 
-## Response
+### Response
 
 ```JSON
 {

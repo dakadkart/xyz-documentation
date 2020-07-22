@@ -8,6 +8,6 @@
 
 [`https://xyz.api.here.com/hub/static/redoc/`](https://xyz.api.here.com/hub/static/redoc/)
 
-## Other Useful Links
+## HERE XYZ Links
 
-You will find other useful links on the [Useful Links page](links.md)
+You will find other useful links on the [HERE XYZ page](links.md)

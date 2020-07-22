@@ -1,10 +1,13 @@
-# Search by BoundingBox
+## Search by Bounding Box
 
-!!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
+
+> #### Note 
+> The endpoint for the API is https://xyz.api.here.com/hub.
+
 
 Searching by bounding box is searching a rectangle area of the map for features.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
 
@@ -12,7 +15,7 @@ Searching by bounding box is searching a rectangle area of the map for features.
 GET /spaces/{spaceId}/bbox?west=-110&north=53&east=-130&south=50&tags=
 ```
 
-## Response
+### Response
 
 ```JSON
 {

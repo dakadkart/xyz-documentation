@@ -1,10 +1,13 @@
-## Space configuration
+## Work with Activity Log
 
-!!! Note "Your account needs access to the XYZ Pro Services."
+### Space configuration
 
-***
 
-(If you just want to have a quick go at Activity-Log, head over to the [quick start guide](../quickstart/activitylog.md).)
+> #### Note 
+> Your account needs access to the XYZ Pro Services.
+
+
+If you just want to have a quick go at Activity-Log, head over to the [quick start guide](../quickstart/activitylog.md).
 
 This connector provides the user with the possibility to track changes to his space. By activating this feature, every modification of features (insert/update/delete by the **ModifyFeaturesEvent**) is tracked and stored in a separate space.
 
@@ -89,7 +92,7 @@ A full space definition with this feature enabled looks like this:
 }
 ```
 
-## Written features
+### Written features
 
 ***
 The features written to the new space are stored by uuid. So the space with this feature enabled needs to have **enableUUID** set to true.
@@ -276,4 +279,5 @@ Depending on the storage mode, the features may or may not contain diffs, in thi
 }
 ```
 
-**Note:** Applying the diffs patch array to the same object, will result in the previous object.
+> #### Note
+> Applying the diffs patch array to the same object, results in the previous object.

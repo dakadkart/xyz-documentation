@@ -1,6 +1,9 @@
-# Use Activity-Log
+## Use Activity Log
 
-!!! Note "Your account needs access to the XYZ Pro Services."
+
+> #### Note 
+Your account needs access to the XYZ Pro Services.
+
 
 1. Create a new space with the activity-log listener and enableUUID set to true:
 
@@ -130,7 +133,7 @@ This results in something like this
 }
 ```
 
-## Search for specific feature
+### Search for specific feature
 
 You can search the Activity Log for a specific feature using its original id. The id of a feature is a String, so ensure that it is quoted for the property search.
 This request returns an unsorted list of all revisions of the object.
@@ -175,7 +178,7 @@ Response
 }
 ```
 
-## Look up a specific revision of a feature
+### Look up a specific revision of a feature
 
 You can search for a specific revision of a feature using the *uuid* of the feature:
 
@@ -224,7 +227,7 @@ Response:
 }
 ```
 
-## Activity Log for a certain point in time
+### Activity Log for a certain point in time
 
 You can search for a specific point in time by looking at the *createdAt* and *invalidatedAt* timestamps:
 

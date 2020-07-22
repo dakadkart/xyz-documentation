@@ -1,8 +1,8 @@
-# JSON Schema
+## JSON Schema
 
-JSON Schema provides vocabulary to define application-specific JSON documents. The authoritative resource for this topic is [json-schema.org]("https://json-schema.org/").
+JSON Schema provides vocabulary to define application-specific JSON documents. The authoritative resource for this topic is [json-schema.org](https://json-schema.org/).
 
-## Most basic Schema
+### Most basic Schema
 
 The most basic schema is  
 
@@ -47,7 +47,9 @@ It is best practice to include a unique identifier for each schema
 { "$id": "http://yourdomain.com/schemas/myschema.json" }
 ```
 
-!!! Warning "HERE XYZ does not load external schema resources"
+> #### Warning 
+> HERE XYZ does not load external schema resources.
+
 
 **$id** can also be used to reference a subschema without using JSON Pointer.
 
@@ -77,9 +79,12 @@ It is best practice to include a unique identifier for each schema
 }
 ```
 
-!!! Warning "The $id properties of the schema must not include whitespace characters"
 
-## Primitive Types
+> #### Warning 
+> The $id properties of the schema must not include whitespace characters.
+
+
+### Primitive Types
 
 A JSON document to which a schema is applied is known as an 'instance'. An instance has one of six primitive types and a range of possible values:
 
@@ -98,7 +103,7 @@ A JSON document to which a schema is applied is known as an 'instance'. An insta
 
 [Understanding JSON Schema](https://json-schema.org/understanding-json-schema/) provides a good overview of JSON Schema and the details of subtypes of the above.
 
-## Example JSON Schema for GeoJSON
+### Example JSON Schema for GeoJSON
 
 ```json5
 {

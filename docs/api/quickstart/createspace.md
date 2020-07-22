@@ -1,4 +1,4 @@
-# Create a Space
+## Create a Space
 
 Here you see the request and response for creating a new space:
 
@@ -19,7 +19,9 @@ with the following body:
 }
 ```
 
-!!! Info "Note:  The Description can contain formatting in markdown format."
+> #### Info 
+> The Description can contain formatting in markdown format.
+
 
 ### Response
 
@@ -31,4 +33,7 @@ with the following body:
 }
 ```
 
-!!! Info "Note:  The ID is a unique, randomly generated identifier and is mandatory as an argument in subsequent requests"
+
+> #### Info 
+> The ID is a unique, randomly generated identifier and is mandatory as an argument in 
+> subsequent requests.

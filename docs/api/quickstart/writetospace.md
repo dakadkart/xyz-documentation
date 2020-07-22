@@ -1,8 +1,8 @@
-# Writing to a Space
+## Write to a Space
 
 Having created the new space, you can write to it. The following example adds a collection of features.
 
-## Request
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Features)*
 
@@ -34,7 +34,7 @@ The POST request requires a body like the following example:
 }
 ```
 
-## Response
+### Response
 
 The response is a FeatureCollection, containing all created features.
 

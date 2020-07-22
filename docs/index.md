@@ -1,4 +1,3 @@
-
 ## Make great maps easier and faster
 
 HERE XYZ is an open, interoperable and real-time location data management service from HERE Technologies

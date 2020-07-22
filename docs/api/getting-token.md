@@ -1,3 +1,5 @@
+# Manage Tokens
+
 HERE XYZ Hub APIs use project tokens that are tied to your Account or HERE Accounts SSO identity. Make sure to keep your credentials safe and don't include them directly in any web pages as they are the key to generate new access tokens.
 
 Usually you would use two tokens:
@@ -11,8 +13,7 @@ Log into the **XYZ Hub Token Generator** site with your `Email address` and `Pas
 
 [`https://xyz.api.here.com/token-ui/`](https://xyz.api.here.com/token-ui/)
 
-
-[![Developer Overview](../assets/images/start-token-login.png)](../assets/images/start-token-login.png)
+![](images/getting-tokens.png)
 
 ## Assign Access Rights
 
@@ -30,14 +31,14 @@ Available permissions for the token are:
 From the list, select the spaces the token should have access to. Note that some spaces can only be read and not written to.
 It's a good practice to keep the number rights and layers to the minimum needed for your project.
 
-[![Developer Overview](../assets/images/start-token-generate.png)](../assets/images/start-token-generate.png)
+![](images/generate-tokens.png)
 
 ## Generate Token
 
 Next click on **Generate Token** to see you token:
 
-[![Developer Overview](../assets/images/start-token-view.png)](../assets/images/start-token-view.png)
+![](images/token-list.png)
 
-!!! note
 
-    You can revoke the token at any time by just deleting it on the **Manage Token** tab.
+> #### Note
+> You can revoke the token at any time by just deleting it on the **Manage Token** tab.

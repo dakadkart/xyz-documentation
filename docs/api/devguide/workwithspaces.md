@@ -1,8 +1,8 @@
-# Working with Spaces
+## Work with Spaces
 
-## Creating a Space
+### Create a Space
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -19,7 +19,7 @@ As it is a POST request, it has to have at least the following body.
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -29,9 +29,9 @@ As it is a POST request, it has to have at least the following body.
 }
 ```
 
-## Reading a Specific Space
+### Read a Specific Space
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
 
@@ -39,7 +39,7 @@ As it is a POST request, it has to have at least the following body.
 GET /spaces/{spaceId}
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -49,9 +49,9 @@ GET /spaces/{spaceId}
 }
 ```
 
-## Reading all Spaces
+## Read all Spaces
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
 
@@ -59,7 +59,7 @@ GET /spaces/{spaceId}
 GET /spaces
 ```
 
-### Response
+#### Response
 
 ```JSON
 [
@@ -76,9 +76,9 @@ GET /spaces
 ]
 ```
 
-## Updating a Space
+### Update a Space
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -95,7 +95,7 @@ which requires a body like the following:
 }
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -104,9 +104,9 @@ which requires a body like the following:
 }
 ```
 
-## Deleting a Space
+### Delete a Space
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -116,7 +116,7 @@ DELETE /spaces/{spaceId}
 
 A successful response to this request is the following
 
-### Response
+#### Response
 
 ```HTTP
 HTTP/1.1 204 No Content

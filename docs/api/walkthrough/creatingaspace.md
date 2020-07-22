@@ -1,8 +1,11 @@
-# Creating Spaces
+## Create a Space
 
-!!! Note "The endpoint for the API is https://xyz.api.here.com/hub"
 
-## Request
+> #### Note 
+> The endpoint for the API is https://xyz.api.here.com/hub.
+
+
+### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
 
@@ -19,7 +22,7 @@ POST /spaces
 }
 ```
 
-## Response
+### Response
 
 ```JSON
 {

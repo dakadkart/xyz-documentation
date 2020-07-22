@@ -1,29 +1,32 @@
-# Search for Features
+## Search for Features
 
 This section describes how to search for specific features in your space on the basis of the
 properties. This is a powerful tool to retrieve just a specific subset of the content in
 your space.
 
-## Check which properties are searchable
+### Check which properties are searchable
 
 Not all Feature properties are necessarily searchable. So before using the property search it
 makes sense to check which of the properties in your space can be searched.
 
-*NOTE: XYZ has a space-specific algorithm to automatically decide which of the space's properties
-are searchable. In case you desire other properties to be searchable please have a look into
-the guide at ["Adjust searchable properties"](searchableproperties.md).*
+
+> #### Note
+> XYZ has a space-specific algorithm to automatically decide which of the space's properties
+> are searchable. In case you desire other properties to be searchable please have a look into
+> the guide at ["Adjust searchable properties"](searchableproperties.md).*
+
 
 To check which of the properties in your space a search can be performed on, please have a look
 into the space's statistics.
 
-### Request
+#### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getStatistics)*
 ```HTTP
 GET /spaces/{spaceId}/statistics
 ```
 
-### Response
+#### Response
 
 ```JSON
 {
@@ -87,7 +90,7 @@ This is a global indicator which can have one of the following values:
 In case of `PARTIAL` you can find the more detailed `searchable` boolean flags inside the
 `value`-array of the `properties`-map.
 
-## Search for features in the space
+### Search for features in the space
 
 Using one of the API endpoints
 [`/spaces/{spaceId}/search`](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/searchForFeatures),
