@@ -6,7 +6,7 @@ Studio allows you to control the visual appearance of your features. This is
 called a _style_ and there are different options between the basic primitives
 of _Points_,_Lines_ and _Polygons_.
 
-You can view a video overview of this content [here](https://www.here.xyz/assets/videos/simple-styles.mp4).
+You can view a video overview of this content [here](https://www.here.xyz/studio/styles/).
 
 ### Points
 
