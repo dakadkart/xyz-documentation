@@ -109,7 +109,7 @@ nav:
           - Hexbins: cli/topics/hexbins.md
       - XYZ Space Invader: cli/space-invader/index.md
       - GeoJSON Viewer:
-          - Overview: li/viewer-tool/index.md
+          - Overview: cli/viewer-tool/index.md
           - GeoJSON Basics: api/concepts/geojsonbasics.md
           - Advanced Features: cli/viewer-tool/advanced.md
       - Open Datasets:
