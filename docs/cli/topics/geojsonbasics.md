@@ -193,7 +193,7 @@ A **GeometryCollection** is a collection of zero or more geometry objects like t
 
 
 > #### Warning 
-> GeometryCollection is not supported by HERE XYZ Hub. It is just included here for completeness.
+> GeometryCollection is not supported by HERE Data Hub. It is just included here for completeness.
 
 
 #### Example GeometryCollection

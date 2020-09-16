@@ -1,28 +1,28 @@
 # Shapefiles
 
-## Import Shapefiles into XYZ
+## Import Shapefiles into HERE Data Hub
 
 [Shapefiles](https://en.wikipedia.org/wiki/Shapefile) are a proprietary but common geospatial file format developed by ESRI. It is frequently used by governments to store geospatial data. 
 
-As of version 1.1 of the HERE CLI, most shapefiles can be easily uploaded into an XYZ Space. 
+As of version 1.1 of the HERE CLI, most shapefiles can be easily uploaded into a Space. 
 
 	here xyz upload -f my_shapefile.shp
 
-The CLI inspects the CRS and projection data in the `.prj` file normally found in the unzipped shapefile directory and will attempt to convert it to WGS84. If the CLI returns an error, the shapefile will require extra steps before you can bring it into XYZ.  
+The CLI inspects the CRS and projection data in the `.prj` file normally found in the unzipped shapefile directory and will attempt to convert it to WGS84. If the CLI returns an error, the shapefile will require extra steps before you can bring it into HERE Data Hub.  
 
 In this tutorial, we'll cover what you need to do to successfully import shapefiles, along with special steps using other open source tools for those trickier ones.
 
 This document assumes:
 
 - you have already have a free [HERE developer account](https://developer.here.com/)
-- you have installed the [HERE XYZ CLI](https://developer.here.com/tutorials/install-here-cli/)
+- you have installed the [HERE Data Hub CLI](https://developer.here.com/tutorials/install-here-cli/)
 - you have reviewed the [Using the CLI](https://developer.here.com/tutorials/using-the-xyz-cli/) codelab
  
 You should also install
 - [mapshaper](https://github.com/mbloch/mapshaper)
-- [QGIS](https://www.qgis.org/) and the [HERE XYZ QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/)
+- [QGIS](https://www.qgis.org/) and the [QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/)
 
-## Standard Shapefile Upload via the HERE XYZ CLI
+## Standard Shapefile Upload via the HERE Data Hub CLI
 
 Unlike a GeoJSON file, a shapefile is made up of a number of separate files. Shapefiles on the internet are usually zipped, but once uncompressed you will see a number of files with the same name but different extensions. Some of the more important ones are:
 
@@ -30,7 +30,7 @@ Unlike a GeoJSON file, a shapefile is made up of a number of separate files. Sha
 - `.dbf` - contains the attributes for the features 
 - `.prj` - contains information about the projection and coordinate reference system (CRS)
 
-If the shapefile is under 200MB, you should be able to upload it using the HERE XYZ CLI. 
+If the shapefile is under 200MB, you should be able to upload it using the HERE Data Hub CLI. 
 
 In the terminal, `cd` to the unzipped shapefile directory, and type
 
@@ -38,11 +38,11 @@ In the terminal, `cd` to the unzipped shapefile directory, and type
 	
 The CLI will look for `my_shapefile.dbf` and other files in the specified directory. (If it is missing, no attributes of the geometries will be imported.)
 
-Note that you can use `-a` to select attributes of features to convert into tags, which will let you filter features server-side when you access the XYZ Hub API.
+Note that you can use `-a` to select attributes of features to convert into tags, which will let you filter features server-side when you access the HERE Data Hub API.
 
 ## Advanced Shapefile Upload
 
-Shapefiles are an infinitely variable format, and there will be cases where you may need to manipulate or modify the data in order to import it into your XYZ space. You can do this with other open-source geospatial tools, specifically `mapshaper` and QGIS.
+Shapefiles are an infinitely variable format, and there will be cases where you may need to manipulate or modify the data in order to import it into your Space. You can do this with other open-source geospatial tools, specifically `mapshaper` and QGIS.
 
 ### Mapshaper
 
@@ -55,7 +55,7 @@ You can install it using `npm`:
 	
 	npm install -g mapshaper
 	
-Note that `mapshaper` can modify shapefiles directly, or convert shapefiles into GeoJSON. Converting to GeoJSON will give you more options and faster uploads when bringing the data into XYZ. The [mapshaper documentation](https://github.com/mbloch/mapshaper/wiki/Command-Reference) provides a wide variety of options, but a simple conversion command is:
+Note that `mapshaper` can modify shapefiles directly, or convert shapefiles into GeoJSON. Converting to GeoJSON will give you more options and faster uploads when bringing the data into HERE Data Hub. The [mapshaper documentation](https://github.com/mbloch/mapshaper/wiki/Command-Reference) provides a wide variety of options, but a simple conversion command is:
 
 	mapshaper my_geodata.shp -o my_geodata.geojson
 	here xyz upload -f my_geodata.geojson -a
@@ -64,13 +64,13 @@ Note that `mapshaper` can modify shapefiles directly, or convert shapefiles into
 
 	here xyz upload -f my_geodata.geojson -p property_name -s
 	
-Depending on the size of the shapefile you may be able to pipe the geojson from `mapshaper` directly to the XYZ HERE CLI, using the `-` option in `mapshaper`: 
+Depending on the size of the shapefile you may be able to pipe the geojson from `mapshaper` directly to the HERE Data Hub CLI, using the `-` option in `mapshaper`: 
 
 	mapshaper my_geodata.shp -o format=geojson - | here xyz upload spaceID -a -t specific_tag
 	
 
 > #### Note
-> While you normally can use `upload` without specifying an XYZ Space ID, you need to 
+> While you normally can use `upload` without specifying an Space ID, you need to 
 > do so when piping.
 
 
@@ -78,27 +78,27 @@ You can also stream it, which will upload your data much more quickly:
 	
 	mapshaper my_geodata.shp -o format=geojson - | here xyz upload spaceID -p property_name -t specific_tag -s
 	
-(If you see unusual errors when piping from `mapshaper` to XYZ, you may have more success keeping the conversion and uploading as separate steps.)
+(If you see unusual errors when piping from `mapshaper` to HERE Data Hub, you may have more success keeping the conversion and uploading as separate steps.)
 
 Note that you can also run `mapshaper` as a web app, though there may be limits on file sizes.
 
 	http://mapshaper.org
 
 
-### HERE XYZ QGIS Plugin
+### QGIS Plugin
 
-QGIS is an open-source desktop GIS tool that lets you edit, visualize, manage, analyze and convert geospatial data. You can upload and download data from your XYZ spaces using the [HERE XYZ QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/). (The plugin is also available [on Github](https://github.com/heremaps/xyz-qgis-plugin).)
+QGIS is an open-source desktop GIS tool that lets you edit, visualize, manage, analyze and convert geospatial data. You can upload and download data from your Spaces using the [QGIS plugin](https://plugins.qgis.org/plugins/XYZHubConnector/). (The plugin is also available [on Github](https://github.com/heremaps/xyz-qgis-plugin).)
 
-You can install the HERE XYZ QGIS plugin from within QGIS Plugin search tool if you have the "show experimental plugins" option checked in the plugin console settings.
+You can install the QGIS plugin from within QGIS Plugin search tool if you have the "show experimental plugins" option checked in the plugin console settings.
 
 [![Experimental](https://www.here.xyz/assets/images/qgis_plugin_experimental.png)](https://www.here.xyz/assets/images/qgis_plugin_experimental.png)
 
-You can easily open almost any shapefile in QGIS, at which point you can save it to your XYZ spaces using the HERE XYZ QGIS plugin, or export it as GeoJSON to the desktop to use the HERE XYZ CLI streaming upload options.
+You can easily open almost any shapefile in QGIS, at which point you can save it to your Spaces using the QGIS plugin, or export it as GeoJSON to the desktop to use the HERE Data Hub CLI streaming upload options.
 
 
 ## Large Individual Features
 
-Some shapefiles may contain very large and extremely detailed individual lines or polygons. (Coastlines are a common example.) If a single feature is greater than 10-20MB, you may see `400` or `413` http errors when you try to upload the shapefile. In many cases, this level of detail is unnecessary for web mapping. If so, you can try to simplify the feature using `mapshaper` or QGIS. You may also want to adjust HERE XYZ CLI upload parameters so less data is sent in each API request.
+Some shapefiles may contain very large and extremely detailed individual lines or polygons. (Coastlines are a common example.) If a single feature is greater than 10-20MB, you may see `400` or `413` http errors when you try to upload the shapefile. In many cases, this level of detail is unnecessary for web mapping. If so, you can try to simplify the feature using `mapshaper` or QGIS. You may also want to adjust HERE Data Hub CLI upload parameters so less data is sent in each API request.
 
 ### Adjusting 'chunk' Parameters
 
@@ -128,16 +128,16 @@ As previously mentioned, for smaller shapefiles you can pipe output from `mapsha
 
 - open the shapefile in QGIS
 - choose Vector -> Geometry Tools -> Simplify
-- save the simplified data to a new XYZ space using the HERE XYZ plugin
+- save the simplified data to a new Space using the QGiS plugin
 
 Note that the Simplify tool works in decimal degrees, and the default is 1 degree, which is probably not what you want. Useful values depend on the extent and zoom levels of your map, but `0.01`, `0.001`, `0.0001`, and `0.00001` are interesting values.
 
 
 ## Very Large Shapefiles (> 200MB)
 
-The HERE XYZ CLI will attempt to load the entire shapefile into memory before uploading it to the API. This will generally work for shapefiles up to 200MB, but you will start to see Node.js memory errors beyond that.
+The HERE Data Hub CLI will attempt to load the entire shapefile into memory before uploading it to the API. This will generally work for shapefiles up to 200MB, but you will start to see Node.js memory errors beyond that.
 
-While GeoJSON and CSVs can be streamed via the `upload -s` option, this option is not yet available for shapefiles. You will have the most success converting the shapefile to GeoJSON and then uploading to XYZ.
+While GeoJSON and CSVs can be streamed via the `upload -s` option, this option is not yet available for shapefiles. You will have the most success converting the shapefile to GeoJSON and then uploading to HERE Data Hub.
 
 	mapshaper big_data.shp -o format=geojson big_data.geojson
 	here xyz upload spaceID -f big_data.geojson -s
@@ -148,7 +148,7 @@ While GeoJSON and CSVs can be streamed via the `upload -s` option, this option i
 > into tags using `-p`.
 
 
-You can also open the very large shapefile in QGIS and save directly to an XYZ space using the XYZ QGIS plugin, though this will be slower than using the CLI streaming feature as the QGIS plugin is not multi-threaded.
+You can also open the very large shapefile in QGIS and save directly to a Space using the QGIS plugin, though this will be slower than using the CLI streaming feature as the QGIS plugin is not multi-threaded.
 	
 ## Projections and CRS (Coordinate Reference Systems)
 

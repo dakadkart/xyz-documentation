@@ -1,19 +1,19 @@
 # Commands
 
 In this section we give you a quick overview of the most commonly used commands to interact
-with XYZ Spaces from the HERE CLI.
+with Spaces from the HERE Data Hub CLI.
 
 
 > #### Warning 
-> Configuration is required for HERE CLI to work.
+> Configuration is required for HERE Data Hub CLI to work.
 > If you have skipped the previous section now is the time to go back and verify that
-> HERE CLI is properly configured with your developer identity. In case you are not
+> HERE Data Hub CLI is properly configured with your developer identity. In case you are not
 > certain, you can run `here configure verify` to check if your credentials are valid.
   
     
 ## Supported Commands
 
-HERE CLI is built to be modular and extensible, so it is entirely possible that when you
+HERE Data Hub CLI is built to be modular and extensible, so it is entirely possible that when you
 use the tool it has already learned a couple of new tricks.
 
 The general structure is that you call the `here` command followed by *command*
@@ -31,7 +31,7 @@ here --help
 
 ### Configure
 
-As explained earlier, HERE CLI needs to know you to interact with your XYZ Spaces. You can use
+As explained earlier, HERE CLI needs to know you to interact with your Spaces. You can use
 
 ```
 here configure account
@@ -44,11 +44,11 @@ You can also run
 here configure verify
 ```
 
-to check if the credentials provided can be used to interact with HERE APIs.
+to check if the credentials provided can be used to interact with HERE Data Hub APIs.
 
-### XYZ
+### HERE Data Hub
 
-The `xyz` command is used to interact with XYZ Spaces.
+The `xyz` command is used to interact with Spaces.
 
 #### List all Spaces
 
@@ -87,7 +87,7 @@ When you create a new Space, the SpaceID will be generated automatically.
 
 
 > #### Note
-> This is a Pro feature that requires a license. [Learn more about XYZ Pro features here](../../xyz_pro). 
+> This is a Pro feature that requires a license. [Learn more about Pro features here](../../xyz_pro). 
     
 
 #### Upload/Update Data to a Space
@@ -98,7 +98,7 @@ When you create a new Space, the SpaceID will be generated automatically.
 
 `-c, --chunk [chunk]`  chunk size (adjusts the number of features uploaded at once)
 
-`-t, --tags [tags]`    tags for the xyz space (used to filter data from the API)
+`-t, --tags [tags]`    tags for the Space (used to filter data from the API)
 
 `-x, --lon [lon]`      choose longitude CSV field name, if not well known
 
@@ -123,7 +123,7 @@ When you create a new Space, the SpaceID will be generated automatically.
 
 ##### Upload GeoJSON
 
-Upload a GeoJSON file to a new space. XYZ will automatically generate a space ID and display it for you.
+Upload a GeoJSON file to a new space. HERE Data Hub will automatically generate a space ID and display it for you.
 
     here xyz upload -f /Users/xyz/data.geojson
 
@@ -144,15 +144,16 @@ Upload a GeoJSON file to an existing space.
 
 > #### Note 
 > Feature IDs:
-> XYZ requires that every feature in a space has a unique id. (This lets you access features in a
-> space using the API.) If a GeoJSON feature does not have an ID (a common occurance), XYZ's default
-> upload behavior is to create one based on a hash of the feature's property. (If you have duplicate
-> records in a dataset at the same location, only the first will be uploaded.)
-> If you are certain that your dataset has a well-managed set of unique feature IDs, use `upload -o`
-> to have XYZ use them. If you use `-o` to upload a new dataset, and a new feature has the same ID
-> as an existing feature, XYZ will consider it an update and overwrite the existing feature with 
-> the new feature. Many public datasets often have a "unique" set of feature IDs that are simply
-> incremental integers which can lead to feature replacement that you probably didn't want.
+> HERE Data Hub requires that every feature in a space has a unique id. (This lets you access 
+> features in a Space using the HERE Data Hub API.) If a GeoJSON feature does not have an ID 
+> (a common occurance), the default upload behavior is to create one based on a hash of the 
+> feature's property. (If you have duplicate records in a dataset at the same location, only the
+> first will be uploaded.) If you are certain that your dataset has a well-managed set of unique
+> feature IDs, use `upload -o` to have HERE Data Hub use them. If you use `-o` to upload a new dataset, and
+> a new feature has the same ID as an existing feature, HERE Data Hub will consider it an update 
+> and overwrite the existing feature with the new feature. Many public datasets often have a 
+> "unique" set of feature IDs that are simply incremental integers which can lead to feature
+> replacement that you probably didn't want.
 
 ##### Upload a CSV file
 
@@ -160,7 +161,7 @@ Upload a GeoJSON file to an existing space.
     here xyz upload -f /Users/xyz/data.csv
 
 
-XYZ will attempt to choose the columns containing the latitude and longitude fields based on well known names including:
+HERE Data Hub will attempt to choose the columns containing the latitude and longitude fields based on well known names including:
 
     y, ycoord, ycoordinate, coordy, coordinatey, latitude, lat
     x, xcoord, xcoordinate, coordx, coordinatex, longitude, lon, lng, long, longitud
@@ -213,7 +214,7 @@ If your features are small, like you might see in a GeoJSON file containing poin
 
 ##### Upload and Stream Large CSV and GeoJSON Files
 
-To upload very large CSV and GeoJSON files to your XYZ space, will will need to use `-s` -- this will stream the file and avoid Node.js memory errors. (It will also be considerably faster than the standard upload method.)
+To upload very large CSV and GeoJSON files to your Space, will will need to use `-s` -- this will stream the file and avoid Node.js memory errors. (It will also be considerably faster than the standard upload method.)
 
     here xyz upload YOUR_SPACE_ID -f /Users/xyz/big_data.csv -s
 
@@ -226,11 +227,11 @@ To upload very large CSV and GeoJSON files to your XYZ space, will will need to 
 ***
     
 > #### Info
-> HERE XYZ is a database. Databases trade off storage space for speed, and your data will always 
-> take up more space in XYZ than it does in a static file. When a file is uploaded into an XYZ Space,
-> features, their properties, and the geometries are broken out into multiple tables, indexed and
-> tagged. All of this lets you query your geospatial data on demand, and access it dynamically as
-> vector tiles. You can check the size of your XYZ Spaces in your account dashboard or the CLI. 
+> HERE Data Hub is a database. Databases trade off storage space for speed, and your data will always 
+> take up more space in HERE Data Hub than it does in a static file. When a file is uploaded into a 
+> Space, features, their properties, and the geometries are broken out into multiple tables, indexed 
+> and tagged. All of this lets you query your geospatial data on demand, and access it dynamically as
+> vector tiles. You can check the size of your Spaces in your account dashboard or the CLI. 
     
     
 
@@ -266,15 +267,15 @@ More tips in the [Working with Shapefiles](../shapefiles) tutorial.
 here xyz upload -f data.csv -i unique_id
 ```
 
-Upload data to an XYZ space with a feature ID based on the feature's property `unique_id`. 
+Upload data to an space with a feature ID based on the feature's property `unique_id`. 
 
-This feature should be used if your data has well-known and truly unique identifiers that you want to preserve. The XYZ API can [query individual features by feature ID](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getFeatures), so this can be a valuable method of accessing and updating data.
+This feature should be used if your data has well-known and truly unique identifiers that you want to preserve. The HERE Data Hub API can [query individual features by feature ID](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getFeatures), so this can be a valuable method of accessing and updating data.
 
 By default, the CLI will generate a unique feature ID during upload based on a hash of the properties and geometry. 
 
 
 > #### Note
-> Unique IDs are important for XYZ Pro features such as [Virtual Spaces](#virtual-spaces). 
+> Unique IDs are important for Pro services features such as [Virtual Spaces](#virtual-spaces). 
     
 
 
@@ -286,11 +287,11 @@ By default, the CLI will generate a unique feature ID during upload based on a h
 
 ##### Upload and Assign Tags 
 
-Tags are special properties that can be added to a feature that makes it easy to query them from the XYZ API using the `&tags=` parameter.
+Tags are special properties that can be added to a feature that makes it easy to query them from the HERE Data Hub API using the `&tags=` parameter.
 
 
 > #### Note
-> XYZ Tags should be used selectively, ideally using [Rule-Based Tags]().
+> Tags should be used selectively, ideally using [Rule-Based Tags]().
 > Tags are not meant to be a replacement for  [Property Search](#property-search), as you 
 > will be duplicating existing data in a record. 
 
@@ -308,7 +309,7 @@ Uploads data and allows users to select tags from a list of feature keynames, wi
 ```
 here xyz upload -f file.geojson -p treatment
 ```
-Uploads data and adds the value of the selected feature property as tag. These tags can be used to filter data when querying the HERE XYZ API. The tags will be stored as `propertyname@value`. This is most effective when the property consists of a limited number of qualitative values.
+Uploads data and adds the value of the selected feature property as tag. These tags can be used to filter data when querying the HERE Data Hub API. The tags will be stored as `propertyname@value`. This is most effective when the property consists of a limited number of qualitative values.
 
 ###### Response
 
@@ -338,9 +339,9 @@ Show the objects of a space in table, filter by tags or property values, or open
 
 `-p, --prop <prop>     ` property fields to include in table, can be used multiple times
 
-`-w --web         ` display xyz on [http://geojson.tools](http://geojson.tools)
+`-w --web         ` display HERE Data Hub on [http://geojson.tools](http://geojson.tools)
 
-`-v --vector  ` inspect and anayze XYZ spaces using Tangram / [XYZ Space Invader](../space-invader)
+`-v --vector  ` inspect and anayze Spaces using Tangram / [Space Invader](../space-invader)
 
 ##### Filter by Tags
 
@@ -348,17 +349,17 @@ Using `show` on a large space will generate a long table. You can see the raw Ge
 
     here xyz show spaceID -r > my.geojson
 
-If your space contains a few hundred to a few thousand features, you can open the space in geojson.tools, a data preview tool, using `show -w`. Larger spaces can be previewed in [XYZ Space Invader](../space-invader), a Tangram-based tool from XYZ Labs, using `show -v`.
+If your space contains a few hundred to a few thousand features, you can open the Space in geojson.tools, a data preview tool, using `show -w`. Larger spaces can be previewed in [Space Invader](../space-invader), a Tangram-based tool from Labs, using `show -v`.
 
-You can filter tags from XYZ using tags with `-t`:
+You can filter tags from HERE Data Hub using tags with `-t`:
 
 `here xyz show spaceID -t my_tag` (records with `my_tag` will be printed in the console)
 `here xyz show spaceID -w -t my_tag` (records with `my_tag` will be opened in geojson.tools)
-`here xyz show spaceID -v -t my_tag` (records with `my_tag` will be opened in XYZ Space Invader)
+`here xyz show spaceID -v -t my_tag` (records with `my_tag` will be opened in Space Invader)
 
 ##### Property Search 
 
-If a property has been indexed by XYZ, you can filter them with `-s` or `--search`. The property name must be prefixed by `p.`:
+If a property has been indexed by HERE Data Hub, you can filter them with `-s` or `--search`. The property name must be prefixed by `p.`:
 
     here xyz show spaceID -s "p.property_name>value"
     here xyz show spaceID -s "p.name=John,Tom+p.age<50+p.phone='9999999'+p.zipcode=123456" -w
@@ -366,15 +367,15 @@ If a property has been indexed by XYZ, you can filter them with `-s` or `--searc
 - Operators include `=,!=,>,>=,<,<=`
 - Search expressions must be enclosed in double quotes, e.g. `"p.property_name>value"`
 - Use comma separated values to search multiple values of a property, e.g. `OR`. Use `+` for `AND`.
-- Use single quotes to signify a string value, e.g. `"p.property_name>value='100'"` vs `"p.property_name>value=100"`
-- To access feature ID, timestamps, or tags, prefix them with `f.`, e.g. `f.id, f.updatedAt, f.tags f.createdAt`
+- Use single quotes to signify a string value, e.g., `"p.property_name>value='100'"` vs `"p.property_name>value=100"`
+- To access feature ID, timestamps, or tags, prefix them with `f.`, e.g., `f.id, f.updatedAt, f.tags f.createdAt`
 - When accessing Property Search via the API, the URL-safe arguments are `=`, `!=`, `=gt=`, `=gte=`, `=lt=`, `=lte=`.
 
 
 > #### Note
 > Property Search is available in spaces with fewer than 15,000 features by default. 
 > For spaces larger than 15,000 features, a limited number will be indexed. To access more, 
-> you will need an XYZ Pro license, [learn more about XYZ Pro features here](../xyz_pro).  
+> you will need a Pro pricing plan license, [learn more about Pro pricing plans here](../xyz_pro).  
     
 
 ##### Property Filters
@@ -385,17 +386,17 @@ You can use `show -p` or `--prop` to filter the properties that get returned by 
     
 
 > #### Note 
-> Your account needs access to the XYZ Pro Services. 
-> [Learn more about XYZ Pro features here](../xyz_pro).
+> Your account needs access to the HERE Data Hub Pro pricing plan Services. 
+> [Learn more about Pro pricing plan features here](../xyz_pro).
 
 
 ##### Spatial Search
 
-You can use `--spatial` to search for features in an XYZ space that fall within a radius, or a polygon, or along a line. You can specify a point and a radius, a feature in another XYZ space, or a feature in a geojson file.
+You can use `--spatial` to search for features in an Space that fall within a radius, or a polygon, or along a line. You can specify a point and a radius, a feature in another Space, or a feature in a geojson file.
 
 - `--center`: comma separated `lat,lon` values that specify the center point for the search
 - `--radius`: the radius of the search, in meters, from the `--center` point, or a buffer around a geometry specified with `--feature` or `--geometry`
-- `--feature`: comma separated `spaceid,featureid` values that specify a reference geometry from another XYZ space -- this will return features from the first space that fall within or along a feature from the second space
+- `--feature`: comma separated `spaceid,featureid` values that specify a reference geometry from another Space -- this will return features from the first space that fall within or along a feature from the second space
 - `--geometry`: a single GeoJSON feature in a file to be uploaded for the spatial query
 
 These results are most easily viewable using `show -w`.
@@ -444,8 +445,8 @@ YOUR_TOKEN_NR_2 PERMANENT 1534516620 xyz-hub=readFeatures
 
 
 > #### Note
-> To use this feature, your account needs access to the XYZ Pro Services.
-> [Learn more about XYZ Pro features here](../xyz_pro).
+> To use this feature, your account needs access to the HERE Data Hub Pro pricing services.
+> [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
 
 
 You can use the `config` command to get and update information about your spaces.
@@ -492,7 +493,7 @@ To update the title and/or description of a space:
 
 ##### Share a Space
 
-You can share a space with other users using the `--shared` option. If they have an XYZ account, they will be able to read from that space using their own tokens (and any data transfer will be charged to their XYZ account).
+You can share a Space with other users using the `--shared` option. If they have an HERE Data Hub account, they will be able to read from that space using their own tokens (and any data transfer will be charged to their HERE Data Hub account).
 
     here xyz config spaceID --shared true
     
@@ -505,8 +506,8 @@ You can disable sharing by passing a `false` parameter:
 
 
 > #### Note 
-> To use this feature, your account needs access to the XYZ Pro Services.
-> [Learn more about XYZ Pro features here](../xyz_pro).
+> To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
+> [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
 
 
 A schema validation json file can be configured for a space. The schema definition can be in the form of a web address or a local schema json file. Features that do not match this schema will not be uploaded. 
@@ -525,8 +526,8 @@ here xyz config YOUR_SPACE_ID -s
 
 
 > #### Note 
-> To use this feature, your account needs access to the XYZ Pro Services.
-> [Learn more about XYZ Pro features here](../xyz_pro).
+> To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
+> [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
 
 
 Virtual Spaces give users access to multiple spaces with one ID. Group lets you bundle your spaces together, and changes get written back to their original spaces. Associate lets you make your own personal edits to a shared space or one with public data, merging the properties of objects with the same feature ID.
@@ -538,7 +539,7 @@ Virtual Spaces give users access to multiple spaces with one ID. Group lets you 
 
     here xyz virtualize -g space1,space2,...
     
-`group` takes multiple XYZ spaces and presents them via a single XYZ space ID. Duplicates can occur. Any updates will be made to the original spaces.
+`group` takes multiple Spaces and presents them via a single Space ID. Duplicates can occur. Any updates will be made to the original Spaces.
 
 ##### Associate
 
@@ -560,7 +561,7 @@ The `join` command simplifies use of virtual spaces when using CSV tables and ex
 > geojson.tools via `show -w`.
 
     
-    You can update this "csv space" using `here xyz upload spaceID -f new.csv -k id --noGeom` and the next time the virtual space ID is references, the properties will contain the updated values.
+    You can update this "csv space" using `here xyz upload spaceID -f new.csv -k id --noGeom` and the next time the virtual Space ID is references, the properties will contain the updated values.
     
 #### Spatial Search
 
@@ -570,8 +571,8 @@ The `join` command simplifies use of virtual spaces when using CSV tables and ex
 
 
 > #### Note 
-> To use this feature, your account needs access to the XYZ Pro Services.
-> [Learn more about XYZ Pro features here](../xyz_pro).
+> To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
+> [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
 
 
 The CLI has access to a number of convenient geopspatial data functions via the `here xyz gis` command. Some of these functions add properties to the original features, while others create data in a new space. 
@@ -579,18 +580,18 @@ The CLI has access to a number of convenient geopspatial data functions via the 
 - `--area` uses `turf.js` to calculate the area of polygons, and saves this as a set of new properties in each polygon feature. `xyz_area_sqmiles`,`xyz_area_sqkm` are rounded for display convenience, and `xyz_area_sqm` is not rounded.
 - `--length` uses `turf.js` to calculate the length of lines in a space, and saves this as a set of new properties in each linestring feature, `xyz_length_miles`,`xyz_length_km` which are rounded for display convenience, and `xyz_length_m` which is not rounded.
 - `--centroid` uses `turf.js` to calculate the center of each polygon in a space. By default, these points are written to a new space, but can saved in the existing space using the `--samespace` option. In either case, they all receive a `centroid` tag.
-- `--voronoi` uses `d3-delaunay.js` to generate Voronoi polygons from points in an XYZ space. The edges of these polygons are equidistant from two points, and the vertices are equidistant to three points. By default, they are written to a new space, but can saved in the source point space using the `--samespace` option. In either case, they all receive a `voronoi` tag. 
-- `--tin` uses `d3-delaunay.js` to generate Delaunay triangles from points in an XYZ space. This process maximizes the minimum angle of all the angles of the triangles created from the source points. By default, they are written to a new space, but can saved in the source point space using the `--samespace` option. In either case, they all receive a `tin` tag. 
+- `--voronoi` uses `d3-delaunay.js` to generate Voronoi polygons from points in a Space. The edges of these polygons are equidistant from two points, and the vertices are equidistant to three points. By default, they are written to a new space, but can saved in the source point space using the `--samespace` option. In either case, they all receive a `voronoi` tag. 
+- `--tin` uses `d3-delaunay.js` to generate Delaunay triangles from points in a Space. This process maximizes the minimum angle of all the angles of the triangles created from the source points. By default, they are written to a new space, but can saved in the source point space using the `--samespace` option. In either case, they all receive a `tin` tag. 
 
 #### Hexbins
 
 
 > #### Note 
-> Your account needs access to the XYZ Pro Services.
-> [Learn more about XYZ Pro features here](../../xyz_pro).
+> Your account needs access to the HERE Data Hub Pro pricing plan services.
+> [Learn more about HERE Data Hub Pro pricing plan features here](../../xyz_pro).
 
 
-Hexbins are a data simplification method that makes it easier to visualize large datasets of point features at low zoom levels (continent, country, state/province). A series of hexagon grids are created and the points that fall inside each are counted and written to a new XYZ space, and statistics are calculated across the hexbin grid. 
+Hexbins are a data simplification method that makes it easier to visualize large datasets of point features at low zoom levels (continent, country, state/province). A series of hexagon grids are created and the points that fall inside each are counted and written to a new Space, and statistics are calculated across the hexbin grid. 
 
 These hexagons (or their centroids) and their statistics can be quickly displayed in place of the raw data that might overwhelm a renderer. Default colors indicating relative "occupancy" are generated for convenience of display.
 
@@ -604,7 +605,7 @@ Hexbins are tagged by zoom level, width, and type, making it easy to extract one
 
 You can learn more about hexbins and how to display them [in this tutorial](../hexbins).
 
-##### Data Contained in XYZ Hexbins
+##### Data Contained in Hexbins
 
 Hexbin features contain various values that can help with analysis and visualization:
 - `count`: the number of points in a hexbin 
@@ -638,7 +639,7 @@ Hexbin features contain various values that can help with analysis and visualiza
 
 ##### Hexbin Sum and Average
 
-If a property is qualitative (property values, income, population), in addition to counting points, XYZ Hexbins can add up the value of the properties in each hexbin as well as calculate the average.
+If a property is qualitative (property values, income, population), in addition to counting points, Hexbins can add up the value of the properties in each hexbin as well as calculate the average.
 
     here xyz hexbin spaceID -z 10 -a incidents
 

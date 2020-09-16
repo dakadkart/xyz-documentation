@@ -43,7 +43,7 @@ of the data in context.
 
 When you work with data on the map and select one feature, this features highlights on the map a
 magenta color. At the same time, the payload properties are shown in a heads-up data overlay in
-the top left hand corner of the map, where you can drill down into the individual attributes
+the top left hand corner of the map, where you can drill down into the individual attributes.
 
 ![Tool Overview](images/viewer-map-hud.png)
 

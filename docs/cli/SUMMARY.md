@@ -6,7 +6,7 @@
   - [Commands](topics/cli.md)
   - [Shapefiles](topics/shapefiles.md)
   - [Hexbins](topics/hexbins.md)
-- [XYZ Space Invader](space-invader/index.md)
+- [HERE Space Invader](space-invader/index.md)
 - [GeoJSON Viewer](viewer-tool/index.md)
   - [GeoJSON Basics](topics/geojsonbasics.md)
   - [Advanced Features](viewer-tool/advanced.md)

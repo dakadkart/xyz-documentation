@@ -1,24 +1,24 @@
-# XYZ Space Invader
+# Space Invader
 
-XYZ Space Invader lets you inspect and analyze data, properties, and tags in an XYZ Space.
+Space Invader lets you inspect and analyze data, properties, and tags in a Space.
 
-It uses the tile query feature of the Tangram.js API, Space Invader to read, count and store all tags in the vector tiles loaded for map display, saving a second query to the XYZ endpoint.
+It uses the tile query feature of the Tangram.js API, Space Invader to read, count and store all tags in the vector tiles loaded for map display, saving a second query to the endpoint.
 
 It can also read and analyze properties of features in the viewport, and dynamically assign color ranges based on their ranges (for numbers), or counts (of discrete values). It can calculate basic statistics on values in a space and use those to help display appropriate color ramps.
 
-From the HERE XYZ `/statistics` endpoint, it reads the number of features and the size of the space along with the bounding box of the data, and attempts to center the map there (unless the map is already centered within the bbox).
+From the `/statistics` endpoint, it reads the number of features and the size of the space along with the bounding box of the data, and attempts to center the map there (unless the map is already centered within the bbox).
 
 Multiple color palettes can be applied to property ranges and ranks, and it is designed to be easy to add more palettes.
 
 Multiple basemaps are available. Basemap properties such as roads and buildings can be toggled on and off. The size of points and lines can also be increased and decreased to help visualize data sets of various density. 
 
-XYZ Space Invader can show hundreds of thousands to millions of features, though this depends greatly on geographic density of data, zoom level, and kind and complexity of the geometries involved. In general you will be able to show more points and lines than polygons at any given zoom level. We're also working on ways to intelligently handle dense data sets using tags and hexbins.
+Space Invader can show hundreds of thousands to millions of features, though this depends greatly on geographic density of data, zoom level, and kind and complexity of the geometries involved. In general you will be able to show more points and lines than polygons at any given zoom level. We're also working on ways to intelligently handle dense data sets using tags and hexbins.
 
 ## To get started
 
-- [install the HERE CLI](https://www.here.xyz/cli/)
-- upload a GeoJSON file, CSV or Shapefile to an XYZ Space, and add tags based on properties https://www.here.xyz/cli/cli/
-- open XYZ Space Invader from your account using `here xyz show SPACEID -v`
+- [install the HERE Data Hub CLI](https://www.here.xyz/cli/)
+- upload a GeoJSON file, CSV or Shapefile to a Space, and add tags based on properties https://www.here.xyz/cli/cli/
+- open Space Invader from your account using `here xyz show SPACEID -v`
 
 Here are some examples to get you familiar with the interface and what Space Invader can do:
 
@@ -41,7 +41,9 @@ X-ray mode shows you an overview of the geometries in the space. This is especia
 
 https://xyz-space-invader.netlify.com/?space=ylnRzWDL&token=AOsE9k2EdCdT8lEX12PDZ38&basemap=refill-dark&buildings=0&outlines=1&roads=1&water=0&colors=xray#11.6/34.0256/-118.3172
 
-_Note: You can toggle polygon outlines on and off (either press 'o' or click on 'outlines' in the top left panel)_
+> #### Note 
+> You can toggle polygon outlines on and off (either press 'o' or click on 'outlines' in the 
+> top left panel).
 
 ### Hash mode
 
@@ -63,7 +65,7 @@ Color choices are consistent for any specific property value, but this does not 
 
 ### Range
 
-This is ideal for properties with continuous numerical values (temperature, price, area, vote count, etc). It will apply a color palette from the minimum to maximum values of the property seen in the viewport.
+This is ideal for properties with continuous numerical values (temperature, price, area, vote count, etc). It applies a color palette from the minimum to maximum values of the property seen in the viewport.
 
 ![ca-gov-votes-range-precinct](screenshots/ca-gov-votes-range-precinct.png)
 
