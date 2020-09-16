@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ## Create a Space
 
+=======
+# Create a Space
+
+> #### Note
+>
+> The endpoint for the API is <https://xyz.api.here.com/hub>.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 > #### Note 
 > The endpoint for the API is https://xyz.api.here.com/hub.
@@ -7,7 +15,7 @@
 
 ### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit%20Spaces/postSpace)*
 
 ```HTTP
 POST /spaces

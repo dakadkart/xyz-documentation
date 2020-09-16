@@ -5,9 +5,15 @@ with Spaces from the HERE Data Hub CLI.
 
 
 > #### Warning 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > Configuration is required for HERE Data Hub CLI to work.
 > If you have skipped the previous section now is the time to go back and verify that
 > HERE Data Hub CLI is properly configured with your developer identity. In case you are not
+=======
+> Configuration is required for HERE CLI to work.
+> If you have skipped the previous section now is the time to go back and verify that
+> HERE CLI is properly configured with your developer identity. In case you are not
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 > certain, you can run `here configure verify` to check if your credentials are valid.
   
     
@@ -46,7 +52,11 @@ here configure verify
 
 to check if the credentials provided can be used to interact with HERE Data Hub APIs.
 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 ### HERE Data Hub
+=======
+### XYZ
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 The `xyz` command is used to interact with Spaces.
 
@@ -87,7 +97,11 @@ When you create a new Space, the SpaceID will be generated automatically.
 
 
 > #### Note
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > This is a Pro feature that requires a license. [Learn more about Pro features here](../../xyz_pro). 
+=======
+> This is a Pro feature that requires a license. [Learn more about XYZ Pro features here](../../xyz_pro). 
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
     
 
 #### Upload/Update Data to a Space
@@ -144,6 +158,7 @@ Upload a GeoJSON file to an existing space.
 
 > #### Note 
 > Feature IDs:
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > HERE Data Hub requires that every feature in a space has a unique id. (This lets you access 
 > features in a Space using the HERE Data Hub API.) If a GeoJSON feature does not have an ID 
 > (a common occurance), the default upload behavior is to create one based on a hash of the 
@@ -154,6 +169,17 @@ Upload a GeoJSON file to an existing space.
 > and overwrite the existing feature with the new feature. Many public datasets often have a 
 > "unique" set of feature IDs that are simply incremental integers which can lead to feature
 > replacement that you probably didn't want.
+=======
+> XYZ requires that every feature in a space has a unique id. (This lets you access features in a
+> space using the API.) If a GeoJSON feature does not have an ID (a common occurance), XYZ's default
+> upload behavior is to create one based on a hash of the feature's property. (If you have duplicate
+> records in a dataset at the same location, only the first will be uploaded.)
+> If you are certain that your dataset has a well-managed set of unique feature IDs, use `upload -o`
+> to have XYZ use them. If you use `-o` to upload a new dataset, and a new feature has the same ID
+> as an existing feature, XYZ will consider it an update and overwrite the existing feature with 
+> the new feature. Many public datasets often have a "unique" set of feature IDs that are simply
+> incremental integers which can lead to feature replacement that you probably didn't want.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 ##### Upload a CSV file
 
@@ -227,11 +253,19 @@ To upload very large CSV and GeoJSON files to your Space, will will need to use 
 ***
     
 > #### Info
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > HERE Data Hub is a database. Databases trade off storage space for speed, and your data will always 
 > take up more space in HERE Data Hub than it does in a static file. When a file is uploaded into a 
 > Space, features, their properties, and the geometries are broken out into multiple tables, indexed 
 > and tagged. All of this lets you query your geospatial data on demand, and access it dynamically as
 > vector tiles. You can check the size of your Spaces in your account dashboard or the CLI. 
+=======
+> HERE XYZ is a database. Databases trade off storage space for speed, and your data will always 
+> take up more space in XYZ than it does in a static file. When a file is uploaded into an XYZ Space,
+> features, their properties, and the geometries are broken out into multiple tables, indexed and
+> tagged. All of this lets you query your geospatial data on demand, and access it dynamically as
+> vector tiles. You can check the size of your XYZ Spaces in your account dashboard or the CLI. 
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
     
     
 
@@ -275,11 +309,26 @@ By default, the CLI will generate a unique feature ID during upload based on a h
 
 
 > #### Note
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > Unique IDs are important for Pro services features such as [Virtual Spaces](#virtual-spaces). 
+    
+
+=======
+> Unique IDs are important for XYZ Pro features such as [Virtual Spaces](#virtual-spaces). 
     
 
 
 
+> #### Warning
+> Many GIS systems will simply assign incrementing integers as feature IDs to every file. 
+> These can conflict across files.
+    
+
+##### Upload and Assign Tags 
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
+
+
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > #### Warning
 > Many GIS systems will simply assign incrementing integers as feature IDs to every file. 
 > These can conflict across files.
@@ -296,6 +345,15 @@ Tags are special properties that can be added to a feature that makes it easy to
 > will be duplicating existing data in a record. 
 
 
+=======
+
+> #### Note
+> XYZ Tags should be used selectively, ideally using [Rule-Based Tags]().
+> Tags are not meant to be a replacement for  [Property Search](#property-search), as you 
+> will be duplicating existing data in a record. 
+
+
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 ###### Assign Tags Interactively
 
 ```
@@ -375,7 +433,11 @@ If a property has been indexed by HERE Data Hub, you can filter them with `-s` o
 > #### Note
 > Property Search is available in spaces with fewer than 15,000 features by default. 
 > For spaces larger than 15,000 features, a limited number will be indexed. To access more, 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > you will need a Pro pricing plan license, [learn more about Pro pricing plans here](../xyz_pro).  
+=======
+> you will need an XYZ Pro license, [learn more about XYZ Pro features here](../xyz_pro).  
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
     
 
 ##### Property Filters
@@ -386,8 +448,13 @@ You can use `show -p` or `--prop` to filter the properties that get returned by 
     
 
 > #### Note 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > Your account needs access to the HERE Data Hub Pro pricing plan Services. 
 > [Learn more about Pro pricing plan features here](../xyz_pro).
+=======
+> Your account needs access to the XYZ Pro Services. 
+> [Learn more about XYZ Pro features here](../xyz_pro).
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 
 ##### Spatial Search
@@ -445,8 +512,13 @@ YOUR_TOKEN_NR_2 PERMANENT 1534516620 xyz-hub=readFeatures
 
 
 > #### Note
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > To use this feature, your account needs access to the HERE Data Hub Pro pricing services.
 > [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
+=======
+> To use this feature, your account needs access to the XYZ Pro Services.
+> [Learn more about XYZ Pro features here](../xyz_pro).
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 
 You can use the `config` command to get and update information about your spaces.
@@ -506,8 +578,13 @@ You can disable sharing by passing a `false` parameter:
 
 
 > #### Note 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
 > [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
+=======
+> To use this feature, your account needs access to the XYZ Pro Services.
+> [Learn more about XYZ Pro features here](../xyz_pro).
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 
 A schema validation json file can be configured for a space. The schema definition can be in the form of a web address or a local schema json file. Features that do not match this schema will not be uploaded. 
@@ -526,8 +603,13 @@ here xyz config YOUR_SPACE_ID -s
 
 
 > #### Note 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
 > [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
+=======
+> To use this feature, your account needs access to the XYZ Pro Services.
+> [Learn more about XYZ Pro features here](../xyz_pro).
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 
 Virtual Spaces give users access to multiple spaces with one ID. Group lets you bundle your spaces together, and changes get written back to their original spaces. Associate lets you make your own personal edits to a shared space or one with public data, merging the properties of objects with the same feature ID.
@@ -571,8 +653,13 @@ The `join` command simplifies use of virtual spaces when using CSV tables and ex
 
 
 > #### Note 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 > To use this feature, your account needs access to the HERE Data Hub Pro pricing plan services.
 > [Learn more about HERE Data Hub Pro pricing plan features here](../xyz_pro).
+=======
+> To use this feature, your account needs access to the XYZ Pro Services.
+> [Learn more about XYZ Pro features here](../xyz_pro).
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 
 The CLI has access to a number of convenient geopspatial data functions via the `here xyz gis` command. Some of these functions add properties to the original features, while others create data in a new space. 
@@ -585,6 +672,14 @@ The CLI has access to a number of convenient geopspatial data functions via the 
 
 #### Hexbins
 
+<<<<<<< HEAD:docs/cli/topics/cli.md
+=======
+
+> #### Note 
+> Your account needs access to the XYZ Pro Services.
+> [Learn more about XYZ Pro features here](../../xyz_pro).
+
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 > #### Note 
 > Your account needs access to the HERE Data Hub Pro pricing plan services.
@@ -605,7 +700,11 @@ Hexbins are tagged by zoom level, width, and type, making it easy to extract one
 
 You can learn more about hexbins and how to display them [in this tutorial](../hexbins).
 
+<<<<<<< HEAD:docs/cli/topics/cli.md
 ##### Data Contained in Hexbins
+=======
+##### Data Contained in XYZ Hexbins
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/topics/cli.md
 
 Hexbin features contain various values that can help with analysis and visualization:
 - `count`: the number of points in a hexbin 

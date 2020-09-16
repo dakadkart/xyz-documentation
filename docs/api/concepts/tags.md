@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## Tags
+=======
+# Tags
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 To work efficiently with data, it is often necessary or helpful to sub-divide a data. Spaces allow you to do this with the help of tags. A Tag is just a text that can be used to only concern yourself with a subset of the data. They are completely up to you (or the owner of the Space you are working with).
 

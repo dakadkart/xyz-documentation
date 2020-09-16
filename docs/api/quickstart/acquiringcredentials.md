@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ## Acquire Credentials
+=======
+# Acquire Credentials
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
-All users of the HERE XYZ Hub must get authentication and authorization credentials. These credentials are assigned per application, and a bearer token is obtained by using the app_id and app_code issued by the HERE Developer Portal
+All users of the HERE Data Hub must get authentication and authorization credentials. These credentials are assigned per application, and a bearer token is obtained by using the app_id and app_code issued by the HERE Developer Portal
 
 The bearer token is provided as a value of the “Authorization” header parameter using the “Bearer” authentication scheme:
 

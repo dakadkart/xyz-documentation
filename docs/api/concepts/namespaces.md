@@ -19,19 +19,19 @@ with the following body
     "type":"FeatureCollection",
     "features":
     [
-	    {
-	    	"type":"Feature",
-	    	"properties":
-	    	{
-	    		"name":"Baldy Mountain"
-	    	},
-	    	"geometry":
-	    	{
-	    		"type":"Point",
-	    		"coordinates":[-100.728, 51.4686]
-	    	}
-	    }
-	]
+      {
+        "type":"Feature",
+        "properties":
+        {
+          "name":"Baldy Mountain"
+        },
+        "geometry":
+        {
+          "type":"Point",
+          "coordinates":[-100.728, 51.4686]
+        }
+      }
+  ]
 }
 ```
 
@@ -74,7 +74,7 @@ with the following body
 }
 ```
 
-When you upload a feature to XYZ Hub, we automatically add a property *@ns:com:here:xyz* to it. The following information is recorded in this property:
+When you upload a feature to Data Hub, we automatically add a property *@ns:com:here:xyz* to it. The following information is recorded in this property:
 
 + *createdAt* - date and time the feature was created in milliseconds since 01.01.1970
 + *updatedAt* - date and time the feature was updated in milliseconds since 01.01.1970

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 ## Work with Spaces
 
 ### Create a Space
+=======
+# Work with Spaces
+
+## Create a Space
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 #### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit%20Spaces/postSpace)*
 
 ```HTTP
 POST /spaces
@@ -29,11 +35,15 @@ As it is a POST request, it has to have at least the following body.
 }
 ```
 
+<<<<<<< HEAD
 ### Read a Specific Space
+=======
+## Read a Specific Space
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 #### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Spaces/getSpace)*
 
 ```HTTP
 GET /spaces/{spaceId}
@@ -53,7 +63,7 @@ GET /spaces/{spaceId}
 
 #### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Spaces/getSpaces)*
 
 ```HTTP
 GET /spaces
@@ -71,19 +81,23 @@ GET /spaces
     {
         "id": "x-trees",
         "title": "A public space",
-        "description": "All the old oaks in Berlin" 
+        "description": "All the old oaks in Berlin"
     }
 ]
 ```
 
+<<<<<<< HEAD
 ### Update a Space
+=======
+## Update a Space
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 #### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit%20Spaces/patchSpace)*
 
 ```HTTP
-PUT /spaces/{spaceId}
+PATCH /spaces/{spaceId}
 ```
 
 which requires a body like the following:
@@ -104,11 +118,15 @@ which requires a body like the following:
 }
 ```
 
+<<<<<<< HEAD
 ### Delete a Space
+=======
+## Delete a Space
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 #### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit_Spaces)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Edit%20Spaces/deleteSpace)*
 
 ```HTTP
 DELETE /spaces/{spaceId}
@@ -120,4 +138,4 @@ A successful response to this request is the following
 
 ```HTTP
 HTTP/1.1 204 No Content
-```
+``

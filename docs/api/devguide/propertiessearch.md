@@ -9,12 +9,20 @@ your space.
 Not all Feature properties are necessarily searchable. So before using the property search it
 makes sense to check which of the properties in your space can be searched.
 
+<<<<<<< HEAD
 
 > #### Note
 > XYZ has a space-specific algorithm to automatically decide which of the space's properties
 > are searchable. In case you desire other properties to be searchable please have a look into
 > the guide at ["Adjust searchable properties"](searchableproperties.md).*
 
+=======
+> #### Note
+>
+> Data Hub has a space-specific algorithm to automatically decide which of the space's properties
+> are searchable. In case you desire other properties to be searchable please have a look into
+> the guide at ["Adjust searchable properties"](searchableproperties.md).*
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 To check which of the properties in your space a search can be performed on, please have a look
 into the space's statistics.
@@ -22,6 +30,7 @@ into the space's statistics.
 #### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getStatistics)*
+
 ```HTTP
 GET /spaces/{spaceId}/statistics
 ```
@@ -83,6 +92,7 @@ GET /spaces/{spaceId}/statistics
 
 The StatisticsResponse above, shows the searchable property having the value PARTIAL.
 This is a global indicator which can have one of the following values:
+
 - `NONE` *(No properties in your space are searchable, so no search queries can be performed)*
 - `PARTIAL` *(Some of the properties are searchable)*
 - `ALL` *(All of the properties are searchable)*
@@ -103,6 +113,7 @@ query. Such a query could look like:
 ```HTTP
 GET /spaces/{spaceId}/search?p.someProperty1=value1,value2
 ```
+
 Here the prefix `p.` points to the feature's properties map.
 The resulting FeatureCollection will contain all features having `value1` **or** `value2` for the
 property `property_name_1`.
@@ -122,6 +133,7 @@ The available operators are:
 - "<=" or "=lte=" - less than or equals
 - ">" or "=gt=" - greater than
 - "<" or "=lt=" - less than
+- "@>" or "=cs=" - contains
 
 The response will contain only the features matching all conditions in the query.
 In case of the bounding-box or tile queries, the search is only applied to the features located in

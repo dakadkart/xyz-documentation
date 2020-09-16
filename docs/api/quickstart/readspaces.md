@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## Read Spaces
+=======
+# Read Spaces
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 Once you have acquired your credentials, you can determine the spaces to which you have access.
 

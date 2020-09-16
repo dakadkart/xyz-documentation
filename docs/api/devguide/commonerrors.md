@@ -24,7 +24,11 @@ This means that JSON Schema used for validation must not contain
 "@ns:com.here.xyz" as a required property, because this property and its
 children will be removed before validation and only re-added afterwards.
 
+<<<<<<< HEAD
 #### The schema reference "/myschemafile.json"(http://mydomain/myschemafile.json) cannot be resolved.
+=======
+### The schema reference "/myschemafile.json"("http://mydomain/myschemafile.json") cannot be resolved.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 We will not load resolve external schema definitions, even if the URL points
 to a valid (sub-)schema. Please use the *definitions* keyword to merge multiple

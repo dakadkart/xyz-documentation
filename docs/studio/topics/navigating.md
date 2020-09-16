@@ -22,7 +22,15 @@ If you have a lot of projects, you will also see a couple of organizer
 functions that help you quickly get an overview or find what you're looking
 for.
 
+<<<<<<< HEAD:docs/studio/topics/navigating.md
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/projects-dashboard.mp4).
+=======
+<video width="100%"  controls>
+  <source src="../videos/projects-dashboard.mp4" type="video/mp4">
+  <source src="../../videos/projects-dashboard.mp4" type="video/mp4">
+You can view a video overview of this content <a href="../videos/projects-dashboard.mp4">here</a>.
+</video>
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/studio/topics/navigating.md
 
 ### Data Hub
 
@@ -33,7 +41,15 @@ dataset. You can also upload data as a new dataset.
 You can also manage your data, upload new datasets, edit entries, delete complete datasets and of course download a file of the content stored 
 in our cloud.
 
+<<<<<<< HEAD:docs/studio/topics/navigating.md
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/data-hub.mp4).
+=======
+<video width="100%"  controls>
+  <source src="../videos/data-hub.mp4" type="video/mp4">
+  <source src="../../videos/data-hub.mp4" type="video/mp4">
+You can view a video overview of this content <a href="../videos/data-hub.mp4">here</a>.
+</video>
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/studio/topics/navigating.md
 
 ## Project
 
@@ -43,7 +59,15 @@ You can quickly navigate around the map using the mouse, changing the view
 by _dragging_ the map and using the _zoom control_ (or the mouse wheel) to
 quickly zoom nearer or father away from the map. You can also **search** for cities and places by using the search bar.
 
+<<<<<<< HEAD:docs/studio/topics/navigating.md
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/navigate-map.mp4).
+=======
+<video width="100%"  controls>
+  <source src="../videos/navigate-map.mp4" type="video/mp4">
+  <source src="../../videos/navigate-map.mp4" type="video/mp4">
+You can view a video overview of this content <a href="../videos/naivgate-map.mp4">here</a>.
+</video>
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/studio/topics/navigating.md
 
 ### Map Bookmarks
 
@@ -52,4 +76,12 @@ that you need to _switch_ between different pre-defined map views. So in each
 project you can define you own **location bookmarks** and quickly switch 
 between them.
 
+<<<<<<< HEAD:docs/studio/topics/navigating.md
 You can view a video overview of this content [here](https://www.here.xyz/assets/videos/navigate-bookmarks.mp4).
+=======
+<video width="100%"  controls>
+  <source src="../videos/navigate-bookmarks.mp4" type="video/mp4">
+  <source src="../../videos/navigate-bookmarks.mp4" type="video/mp4">
+You can view a video overview of this content <a href="../videos/navigate-bookmarks.mp4">here</a>.
+</video>
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/studio/topics/navigating.md

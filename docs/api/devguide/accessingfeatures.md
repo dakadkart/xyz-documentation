@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ## Access Features
+=======
+# Access Features
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
-This section describes how to get features from HERE XYZ Hub by using a bounding box or a tile, and iterating features.
+This section describes how to get features from HERE Data Hub by using a bounding box or a tile, and iterating features.
 
 ### Get Features by Bounding Box
 
@@ -87,7 +91,7 @@ GET /spaces/{spaceId}/tile/{type}/{tileId}
                     53.430828
                 ]
             },
-            "properties": 
+            "properties":
             {
                 "name": "Anfield",
                 "spaceId@ns:com:here:xyz":

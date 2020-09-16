@@ -4,6 +4,12 @@
 > #### Note 
 > The endpoint for the API is https://xyz.api.here.com/hub.
 
+<<<<<<< HEAD
+=======
+> #### Note
+>
+> The endpoint for the API is <https://xyz.api.here.com/hub>.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 Iterating over features is different from search in two ways:
 
@@ -14,7 +20,7 @@ Sometimes your search will have a lot of features as a result. But the limit you
 
 ### Request
 
-*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read_Features)*
+*Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/iterateFeatures)*
 
 ```HTTP
 GET /spaces/{spaceId}/iterate?tags=&limit=2&handle=2

@@ -47,9 +47,15 @@ It is best practice to include a unique identifier for each schema
 { "$id": "http://yourdomain.com/schemas/myschema.json" }
 ```
 
+<<<<<<< HEAD
 > #### Warning 
 > HERE XYZ does not load external schema resources.
 
+=======
+> #### Warning
+>
+> HERE Data Hub does not load external schema resources.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 **$id** can also be used to reference a subschema without using JSON Pointer.
 
@@ -79,6 +85,12 @@ It is best practice to include a unique identifier for each schema
 }
 ```
 
+<<<<<<< HEAD
+=======
+> #### Warning
+>
+> The $id properties of the schema must not include whitespace characters.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 > #### Warning 
 > The $id properties of the schema must not include whitespace characters.

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ## Use Clustering
+=======
+# Use Clustering
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
-This section describes how to retrieve features from XYZ Hub inside a tile or bounding-box in a
+This section describes how to retrieve features from Data Hub inside a tile or bounding-box in a
 clustered form.
 
 ### Get clustered Features in a Bounding Box
@@ -12,12 +16,11 @@ returned as properties of the returned hexagonal features.
 
 The hexbin algorithm divides the world in hexagonal "bins" on a specified resolution.
 Each hexagon has an address being described by the H3 addressing scheme.
-For more information on that topic see: https://eng.uber.com/h3/
+For more information on that topic see: <https://eng.uber.com/h3/>
 
 #### Request
 
 *Try in [Swagger](https://xyz.api.here.com/hub/static/swagger/#/Read%20Features/getFeaturesByTile)*
-
 
 ```HTTP
 GET /spaces/{spaceId}/tile/{type}/{tileId}?clustering=hexbin&clustering.resolution={aNumber}&clustering.property={aPropertyName}
@@ -30,8 +33,7 @@ The following clustering related parameters can be passed and combined with the 
 |clustering| string "hexbin" | | activates clustering |
 |clustering.resolution| integer [0..15] | optional | The H3 hexagon resolution |
 |clustering.property| string "{aPropertyName}" | optional | A property of the original features for which to calculate statistics |
-|clustering.pointmode | boolean [true\|false] | optional | returns the centroid of the hexagons as geojson-features geometry  |
-
+|clustering.pointmode | boolean [true&#124;false] | optional | returns the centroid of the hexagons as geojson-features geometry  |
 
 #### Response
 
@@ -41,13 +43,13 @@ The following clustering related parameters can be passed and combined with the 
     "features": [
         {
             "type": "Feature",
-            "properties": { 
+            "properties": {
                 "kind" : "H3",
                 "kind_detail" : "858b1303fffffff",
                 "resolution": 5,
                 "level": 7,
                 "aggregation": {
-                    "aPropertyName": {  // only if a clustering.property={aPropertyName} is specified. If not specified field "qty" is 
+                    "aPropertyName": {  // only if a clustering.property={aPropertyName} is specified. If not specified field "qty" is
                                         // written on this object-level (e.g. properties.aggregation.qty )
                         "avg": 30.05000,
                         "max": 44.1,
@@ -65,7 +67,7 @@ The following clustering related parameters can be passed and combined with the 
         ......
         {
             "type": "Feature",
-            "properties": { 
+            "properties": {
                 "kind" : "H3",
                  "kind_detail" : "881f1d4a81fffff",
                     ....
@@ -76,12 +78,18 @@ The following clustering related parameters can be passed and combined with the 
 }
 ```
 
+<<<<<<< HEAD
 #### Miscellaneous
 
 ##### Maximum Resolution for zoomlevel
+=======
+### Miscellaneous
+
+#### Maximum Resolution for zoomlevel
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 The parameter clusterning.resolution specifies the size of the hexagons wanted.
-( s. https://uber.github.io/h3/#/documentation/core-library/resolution-table )
+( s. <https://h3geo.org/docs/core-library/restable> )
 There is a maximum resolution per zoomlevel requested (s. table below). If the value of clusterning.resolution exeeds, then the "Max H3 Resolution" will be used.
 
 |Zoomlevel|Max H3 Resolution|
@@ -109,4 +117,3 @@ There is a maximum resolution per zoomlevel requested (s. table below). If the v
 |20|14|
 |21|15|
 |22|15|
-

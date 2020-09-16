@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Summary
 
@@ -35,3 +36,42 @@
   - [Common Errors](devguide/commonerrors.md)
 - [API Reference](apireference.md)
 - [HERE XYZ Links](links.md)
+=======
+
+# Summary
+
+- [Overview](index.md)
+- [Manage Tokens](getting-token.md)
+- [Quick Start](quickstart/quickstart.md)
+  - [Acquire Credentials](quickstart/acquiringcredentials.md)
+  - [Read Spaces](quickstart/readspaces.md)
+  - [Create a Space](quickstart/createspace.md)
+  - [Write to a Space](quickstart/writetospace.md)
+  - [Use Activity Log](quickstart/activitylog.md)
+- [Concepts](concepts/concepts.md)
+  - [GeoJSON Basics](concepts/geojsonbasics.md)
+  - [Namespaces](concepts/namespaces.md)
+  - [Tags](concepts/tags.md)
+  - [Tiles](concepts/tiles.md)
+  - [JSON Schema](concepts/jsonschema.md)
+- [Walkthrough](walkthrough/walkthrough.md)
+  - [Create a Space](walkthrough/creatingaspace.md)
+  - [Add and Delete Features](walkthrough/addinganddeleting.md)
+  - [Search by Bounding Box](walkthrough/searchbyboundingbox.md)
+  - [Search by Tags](walkthrough/searchbytags.md)
+  - [Iterate over Features](walkthrough/iterateoverfeatures.md)
+  - [Use Schema Validation](walkthrough/schemavalidation.md)
+- [Developer Guide](devguide/developguide.md)
+  - [Work with Spaces](devguide/workwithspaces.md)
+  - [Work with Features](devguide/workwithfeatures.md)
+  - [Tags](devguide/tagging.md)
+  - [Access Features](devguide/accessingfeatures.md)
+  - [Search for Features](devguide/propertiessearch.md)
+  - [Spatial Search for Features](devguide/spatialsearch.md)
+  - [Adjust Searchable Properties](devguide/searchableproperties.md)
+  - [Use Clustering](devguide/usingclustering.md)
+  - [Work with Activity Log](devguide/activitylogguide.md)
+  - [Common Errors](devguide/commonerrors.md)
+- [API Reference](apireference.md)
+- [Useful Links](links.md)
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7

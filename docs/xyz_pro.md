@@ -1,10 +1,14 @@
 # HERE XYZ Pro 
 
+<<<<<<< HEAD
 
 > #### Note 
 > These features require the [Add-On plan](developer.here.com/pricing) to use Pro features. 
 > To sign up for access these features, go to: [developer.here.com/pricing](developer.here.com/pricing).
 
+=======
+!!! Note: These features require the [Add-On plan](https://developer.here.com/pricing) to use Pro features. To sign up for access these features, go to: [developer.here.com/pricing](https://developer.here.com/pricing)
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
 
 ## Property Search
 

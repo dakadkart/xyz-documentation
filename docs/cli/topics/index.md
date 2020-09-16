@@ -1,11 +1,21 @@
 # HERE Data Hub CLI
 
+<<<<<<< HEAD:docs/cli/topics/index.md
 ## Overview
 
 We think developers deserve an easy to use, convenient and streamlined experience to work with HERE Data Hub APIs. That’s why we’ve built the HERE Data Hub CLI. HERE Data Hub CLI is a Node.js command line interface which works not only with HERE Data Hub, but eventually, with any HERE Data Hub API. Right now, it allows you to interact with HERE Data Hub to create and manage your Projects and easily upload and manage your datasets.
+=======
+We think developers deserve an easy to use, convenient and streamlined experience to work with Data Hub APIs. That’s why we’ve built the HERE CLI. HERE CLI is a Node.js command line interface which works not only with HERE Data Hub, but eventually, with any HERE API. Right now, it allows you to interact with HERE Data Hub to create and manage your projects and easily upload and manage your datasets.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/index.md
 
-<script id="asciicast-ohII9SQNs1RIuaSkfAO5UgHlX" src="https://asciinema.org/a/ohII9SQNs1RIuaSkfAO5UgHlX.js" async></script>
+![cli-configure-show](images/gifs/cli-configure-show.gif)
 
+<<<<<<< HEAD:docs/cli/topics/index.md
+=======
+> #### HERE CLI on GitHub
+>
+>[HERE CLI is Open Source](https://github.com/heremaps/here-cli), where developers like yourself can contribute new functionality and features.
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/index.md
 
 > #### Note
 > HERE Data Hub CLI on GitHub:
@@ -37,9 +47,7 @@ Download the package and install it normally.
 Alternatively, if you use a [package manager](https://nodejs.org/en/download/package-manager/#windows) like [Chocolatey](https://chocolatey.org/)
 you just need an administrative cmd.exe/powershell.exe and run
 
-```
-choco install -y nodejs
-```
+    choco install -y nodejs
 
 #### macOS
 
@@ -47,10 +55,7 @@ Similarly on macOS you can just download and install the `.pkg` package file.
 
 You can also use your favorite [package manager](https://nodejs.org/en/download/package-manager/#macos), like homebrew:
 
-``` sh
-brew install node
-```
-
+    brew install node
 
 #### Linux (Ubuntu, Fedora, Gentoo etc)
 
@@ -59,10 +64,8 @@ Follow the instructions at the [Node.js Package Manager](https://nodejs.org/en/d
 For [Debian or Ubunbtu](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 it looks something like this:
 
-```
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    sudo apt-get install -y nodejs
 
 To be on the safe side you might want to install the optional `build-essentials` package as you might come across
 native packages eventually and it's good to have the right tools around.
@@ -71,17 +74,15 @@ native packages eventually and it's good to have the right tools around.
 
 After installing, check in the command-line if `npm` is available. Depending on how you installed it you might need to close and reopen your terminal or command-line prompt.
 
-```
-$ npm -v
-5.x.x
-```
-
+    $ npm -v
+    6.x.x
 
 ### Install HERE Data Hub CLI
 
 When you are sure your system has `node` and `npm` installed you can go ahead and install the latest
 version of HERE Data Hub CLI with following command:
 
+<<<<<<< HEAD:docs/cli/topics/index.md
 ``` sh
 npm install -g @here/cli
 ```
@@ -89,26 +90,34 @@ npm install -g @here/cli
 > #### Note 
 > Administrative permissions.
 
+=======
+    npm install -g @here/cli
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/index.md
 
-    Depending on your system, you might need elevated system permissions to install **globally** with `-g`,
+> #### Note: Administrative permissions
+>
+> Depending on your system, you might need elevated system permissions to install **globally** with `-g`,
     which essentially means you can call the `here` command from anywhere.
-
-    To elevate you permissions, either start an **Admin Command Prompt** or **Admin PowerShell** on Windows,
+>
+> To elevate you permissions, either start an **Admin Command Prompt** or **Admin PowerShell** on Windows,
     or use `sudo` on Linux or macOS.
 
 ### Configure HERE Data Hub CLI
 
+<<<<<<< HEAD:docs/cli/topics/index.md
 HERE Data Hub CLI needs to have access to your projects to help you work with your data. For that, you
+=======
+HERE CLI needs to have access to your account to help you work with your data. For that, you
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/index.md
 need to log in using your HERE developer account. You only need to do this once for a project.
 
-``` sh
-here configure account
-```
+    here configure account
 
 When prompted, enter your email and password that you use in the HERE Developer portal.
 
 The CLI will immediately try to *verify* if the entries can be
 used to log into HERE Data Hub and report back to you accordingly.
+<<<<<<< HEAD:docs/cli/topics/index.md
 
 
 > #### Info
@@ -119,4 +128,13 @@ used to log into HERE Data Hub and report back to you accordingly.
 
     
     
+=======
+
+>#### Info
+>
+> **Where is my login information stored?**  
+> Don't worry, the information entered is safely stored and encrypted on your local machine (if you are curious, look for a file called `.herecli` in your home directory
+    which contains the configuration data)
+
+>>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7:docs/cli/index.md
 To learn more about the HERE CLI's advanced options, take a look at the [detailed tutorial](https://developer.here.com/tutorials/using-the-xyz-cli/).
