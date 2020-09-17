@@ -1,21 +1,11 @@
 {
-<<<<<<< HEAD
-  "title": "HERE Data Hub CLI",
+  "title": "HERE CLI",
   "description": "A guide for HERE Data Hub CLI",
   "variables": {
     "productName": "HERE Data Hub CLI",
     "productVersion": "v1.0",
     "brandName": "HERE",
     "documentName": "HERE Data Hub CLI",
-=======
-  "title": "HERE CLI",
-  "description": "A guide for HERE CLI",
-  "variables": {
-    "productName": "HERE CLI",
-    "productVersion": "v1.0",
-    "brandName": "HERE",
-    "documentName": "HERE CLI",
->>>>>>> 540352cf2039f82e2b4422ef0a2c63cce25bd4c7
     "documentStatus": "FINAL",
     "documentType": "Developer Guide",
     "confidentialnotice": "Confidential",
