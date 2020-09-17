@@ -1,7 +1,7 @@
 
 # SUMMARY
 
-- [HERE CLI](README.md)
+- [HERE Data Hub CLI](README.md)
   - [Overview](index.md)
   - [Basic features](basic-features.md)
   - [Add-on features](add-on.md)

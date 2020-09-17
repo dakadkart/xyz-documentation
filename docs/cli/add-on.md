@@ -1,6 +1,6 @@
-# Add-on features via HERE CLI
+# Add-on features via HERE Data Hub CLI
 
-In this section we give you a quick overview of the advanced HERE CLI commands for Data Hub Add-on features
+In this section we give you a quick overview of the advanced HERE Data Hub CLI commands for Data Hub Add-on features
 in Data Hub Spaces.
 
 ## Schema Validation for GeoJSON data

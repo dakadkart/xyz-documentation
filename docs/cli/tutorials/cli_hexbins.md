@@ -2,7 +2,7 @@
 
 ## Creating hexbins with the HERE CLI
 
-The `hexbin` command in the HERE CLI lets you easily create hexbins and their centroids from large, dense point datasets in your XYZ spaces. Hexbins can be useful for data analysis, and can also allow you to visualize datasets that are too large to effectively view at low (regional or national) map zoom levels.
+The `hexbin` command in the HERE CLI lets you easily create hexbins and their centroids from large, dense point datasets in your spaces. Hexbins can be useful for data analysis, and can also allow you to visualize datasets that are too large to effectively view at low (regional or national) map zoom levels.
 
 ## Getting started
 

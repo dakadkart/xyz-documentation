@@ -161,4 +161,4 @@ If you see any `node.js` memory errors, you can break it up into two steps:
 	mapshaper different_projection.shp -proj wgs84 -o format=geojson different_projection.geojson
 	here xyz upload spaceID -f different_projection.geojson
 	
-If you continue to see errors, you may want to try opening the shapefile in QGIS or use GDAL's `ogr2ogr` conversion tools.
+If you continue to see errors, you may want to try opening the shapefile in QGIS or use GDAL's `ogr2ogr` conversion tools.  
